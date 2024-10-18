@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Contest
+namespace BlackOut.GameManage
 {
+
     // 敵AIの思考パターンを示す列挙型。攻撃的か防御的か、支援型かを判定。
     public enum BehaviorPattern
     {

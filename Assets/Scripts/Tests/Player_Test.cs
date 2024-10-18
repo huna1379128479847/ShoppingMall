@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ShoppingMall;
-using ShoppingMall.InputKey;
+using BlackOut;
+using BlackOut.GameManage.InputKeys;
 using Helpers;
 
 namespace Verse
@@ -11,39 +11,53 @@ namespace Verse
     {
         [SerializeField]private int fontsize = 17;
         [SerializeField] private Vector2 offSet;
-        public override void Awake()
+        private bool isInit;
+        protected override void Start()
         {
-            base.Awake();
-            _popUp.SetFontSize(fontsize);
-            _popUp.Follow.offset = offSet;
-            _popUp.SetText(unitName);
+        }
+
+        private void Init()
+        {
+            nameFollower.Show();
+            nameFollower.SetFontSize(fontsize);
+            nameFollower.SetOffset(offSet);
+            nameFollower.SetText(unitName);
+            isInit = true;
         }
         // Update is called once per frame
-        public override void Update()
+        protected override void Update()
         {
-            Vector2 vec = transform.position;
-            List<KeyType> keys = KeyMappingHolder.CheckPressAllowKeys(PressType.Keep);
-            if (keys.Contains(KeyType.Up))
+            if (isInit)
             {
-                vec.y += 2;
+                Vector2 vec = transform.position;
+                List<KeyType> keys = KeyMappingHolder.CheckPressAllowKeys(PressType.Keep);
+                if (keys.Contains(KeyType.Up))
+                {
+                    vec.y += 2;
+                }
+                if (keys.Contains(KeyType.Down))
+                {
+                    vec.y -= 2;
+                }
+                if (keys.Contains(KeyType.Left))
+                {
+                    vec.x -= 2;
+                }
+                if (keys.Contains(KeyType.Right))
+                {
+                    vec.x += 2;
+                }
+                transform.position = vec;
+                foreach (KeyType key in keys)
+                {
+                    FLGHelper.PrintBinary((uint)key);
+                }
             }
-            if (keys.Contains(KeyType.Down))
+            else if (nameFollower != null && nameFollower.IsInit)
             {
-                vec.y -= 2;
+                Init();
             }
-            if (keys.Contains(KeyType.Left))
-            {
-                vec.x -= 2;
-            }
-            if (keys.Contains(KeyType.Right))
-            {
-                vec.x += 2;
-            }
-            transform.position = vec;
-            foreach (KeyType key in keys)
-            {
-                FLGHelper.PrintBinary((uint)key);
-            }
+            if (nameFollower == null) { Debug.LogError("‹ó"); }
         }
     }
 }

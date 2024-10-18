@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 380763425}
   - component: {fileID: 380763424}
   - component: {fileID: 380763427}
+  - component: {fileID: 380763428}
   m_Layer: 0
   m_Name: 9-Sliced
   m_TagString: Player
@@ -270,6 +271,33 @@ MonoBehaviour:
   unitDescription: qqqqq
   fontsize: 17
   offSet: {x: 0, y: -0.9}
+--- !u!50 &380763428
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380763423}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +453,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.17135525, y: -0.057118416}
@@ -522,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: gagag
   unitDescription: gaga
+  canClick: 0
 --- !u!1 &1474602799
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace ShoppingMall.InputKey
+namespace BlackOut.GameManage.InputKeys
 {
     /// <summary>
     /// キー入力を管理するための列挙型。
-    /// フラグを使用して、複数のキー入力を組み合わせて扱えるようにする。
+    /// KeyTypeHolderとの併用前提
     /// </summary>
     [Flags]
     public enum KeyType

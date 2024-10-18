@@ -1,5 +1,5 @@
-﻿using ShoppingMall;
-using ShoppingMall.InputKey;
+﻿using BlackOut;
+using BlackOut.GameManage.InputKeys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,23 +11,24 @@ namespace Verse
 {
     public class ClickObject : UnitBase, IClickable, IUniqueThing, INameAndDesc
     {
-        private bool canClick;
+        [SerializeField]private bool canClick;
         private float time = 0;
 
         public bool CanClick => canClick;
 
-        public override void Awake()
+        protected override void Awake()
         {
-            base.Awake();
-            _popUp.Hide();
+            id = new Guid();
+            nameFollower = FollowTextFactory.instance.CreateObject(transform, true);
         }
 
         public virtual void ClickAction()
         {
-            _popUp.Show();
-            _popUp.SetText("Get Item.");
+            nameFollower.Show();
+            nameFollower.SetText("Get Item.");
+            nameFollower.SetFontSize(20);
         }
-        public override void Update()
+        protected override void Update()
         {
             base.Update();
             if (KeyMappingHolder.IsPressConfirmKey() || CanClick)
@@ -42,7 +43,7 @@ namespace Verse
             if (time < 0)
             {
                 time = 0;
-                _popUp.Hide();
+                nameFollower.Hide();
             }
         }
         public virtual void OnTriggerEnter2D(Collider2D collision)
@@ -50,6 +51,7 @@ namespace Verse
             if (collision.gameObject.tag == "Player" && !canClick)
             {
                 canClick = true;
+                Debug.Log("Player検出");
             }
         }
 

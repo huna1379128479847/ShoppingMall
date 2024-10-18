@@ -2,7 +2,7 @@
 using UnityEngine;
 using Helpers;
 
-namespace ShoppingMall.InputKey
+namespace BlackOut.GameManage.InputKeys
 {
     /// <summary>
     /// KeyTypeとKeyCodeのマッピングを管理し、特定のキーが押されたかどうかを確認するためのクラス。

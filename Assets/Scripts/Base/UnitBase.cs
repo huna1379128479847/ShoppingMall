@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ShoppingMall;
+using BlackOut;
 using System;
 using TMPro;
+using BlackOut.UI;
 
 namespace Verse
 {
@@ -17,7 +18,7 @@ namespace Verse
         protected bool showName = true;
         protected bool showDescription = true;
 
-        protected IFollowObjectHolder _popUp;
+        protected IFollowTextUI nameFollower;
 
         // プロパティ
         public Guid ID => id;
@@ -47,21 +48,22 @@ namespace Verse
         }
 
         // 初期化処理
-        public virtual void Awake()
+        protected virtual void Awake()
         {
             id = Guid.NewGuid();
-            FollowObject text = PopUpFactory.instance.CreateObject(gameObject.transform);
-            var textMeshProUGUI = text.textMeshPro;
-            _popUp = new TMPro_Helper(gameObject, textMeshProUGUI, text);
-            if (showName)
+            nameFollower = FollowTextFactory.instance.CreateObject(transform);
+            if (nameFollower == null )
             {
-                _popUp.Show();
+                Debug.Log("NameFollowerが空です");
             }
         }
 
-        public virtual void Update()
+        protected virtual void Start()
         {
 
+        }
+        protected virtual void Update()
+        {
         }
     }
 }

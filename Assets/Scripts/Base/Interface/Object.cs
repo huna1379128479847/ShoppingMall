@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using Verse;
 
-namespace ShoppingMall
+namespace BlackOut
 {
     public interface IUniqueThing
     {
@@ -25,30 +25,13 @@ namespace ShoppingMall
         bool CanClick { get; }
         void ClickAction();
     }
-
-    public interface IUserInterface
-    {
-        GameObject User { get; }
-        TextMeshProUGUI TextMeshProUGUI { get; }
-        void SetText(string text);
-
-        void SetFontSize(int fontSize);
-
-        void Show();
-        void Hide();
-    }
-
-    public interface IFollowObjectHolder : IUserInterface
-    {
-        FollowObject Follow { get; }
-    }
     public interface IPlayer
     {
 
     }
 
-    public interface IHolder
+    public interface IFactory<TObject> where TObject : class
     {
-
+        TObject CreateObject();
     }
 }
