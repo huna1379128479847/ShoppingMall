@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using BlackOut;
 using BlackOut.GameManage.InputKeys;
-using Helpers;
+using BlackOut.Utility;
+using BlackOut.GameManage.DataCenter;
 
 namespace Verse
 {
@@ -12,6 +13,8 @@ namespace Verse
         [SerializeField]private int fontsize = 17;
         [SerializeField] private Vector2 offSet;
         private bool isInit;
+        [SerializeField]private Vector2 targetPosition;
+
         protected override void Start()
         {
         }
@@ -27,37 +30,21 @@ namespace Verse
         // Update is called once per frame
         protected override void Update()
         {
-            if (isInit)
+            if (isInit && Input.GetMouseButton(0))
             {
                 Vector2 vec = transform.position;
-                List<KeyType> keys = KeyMappingHolder.CheckPressAllowKeys(PressType.Keep);
-                if (keys.Contains(KeyType.Up))
-                {
-                    vec.y += 2;
-                }
-                if (keys.Contains(KeyType.Down))
-                {
-                    vec.y -= 2;
-                }
-                if (keys.Contains(KeyType.Left))
-                {
-                    vec.x -= 2;
-                }
-                if (keys.Contains(KeyType.Right))
-                {
-                    vec.x += 2;
-                }
-                transform.position = vec;
-                foreach (KeyType key in keys)
-                {
-                    FLGHelper.PrintBinary((uint)key);
-                }
+                targetPosition = Input.mousePosition;
+                
             }
             else if (nameFollower != null && nameFollower.IsInit)
             {
                 Init();
             }
-            if (nameFollower == null) { Debug.LogError("‹ó"); }
+        }
+
+        public virtual void Move(Vector2 target)
+        {
+
         }
     }
 }

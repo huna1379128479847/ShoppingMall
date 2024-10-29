@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using Verse;
 
 namespace BlackOut
@@ -33,5 +35,20 @@ namespace BlackOut
     public interface IFactory<TObject> where TObject : class
     {
         TObject CreateObject();
+    }
+
+    public interface ISceneChanger
+    {
+        UnityEvent OnSceneChanged { get; }
+        Scene FromScene { get; }
+        Scene CurrentScene { get; }
+        bool SceneChange(string toSceneName, string[] args, LoadSceneMode sceneMode = LoadSceneMode.Single);
+
+        bool SceneChange(int toSceneIdx, string[] args, LoadSceneMode sceneMode = LoadSceneMode.Single);
+    }
+
+    public interface ISceneManagement
+    {
+        ISceneManagement Execute(string[] args);
     }
 }

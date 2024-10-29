@@ -109,13 +109,12 @@ namespace BlackOut.UI
     public abstract class TextView : ViewBase<TextViewModel>
     {
         [SerializeField] private TextMeshProUGUI uiText;
-
         protected override void UpdateView()
         {
             if (uiText != null && viewModel != null)
             {
                 uiText.text = viewModel.TextData;
-                uiText.fontSize = viewModel.FontSize;
+                uiText.fontSize = viewModel.FontSize > 0 ? viewModel.FontSize : uiText.fontSize;
                 uiText.color = viewModel.TextColor;
                 uiText.gameObject.SetActive(!viewModel.IsHide);
             }

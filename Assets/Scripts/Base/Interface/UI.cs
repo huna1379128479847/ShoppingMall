@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace BlackOut.UI
@@ -44,8 +45,7 @@ namespace BlackOut.UI
     public interface IButtonUI : IUserInterface
     {
         Button Button { get; }
-        void OnClick();
-        void SetOnClick(Action action);
+        void SetOnClick(UnityAction action);
     }
     // 統合用Interface
     public interface IFollowTextUI : IFollowUI, ICustomizableText

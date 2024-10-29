@@ -1,4 +1,5 @@
 ﻿using BlackOut;
+using BlackOut.GameManage.DataCenter;
 using BlackOut.GameManage.InputKeys;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace Verse
         protected override void Update()
         {
             base.Update();
-            if (KeyMappingHolder.IsPressConfirmKey() || CanClick)
+            if (DataCenter.keyMappingHolder.IsPressConfirmKey() || CanClick)
             {
                 ClickAction();
                 time = 3;
