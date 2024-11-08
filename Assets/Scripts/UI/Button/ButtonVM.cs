@@ -34,11 +34,6 @@ namespace BlackOut.UI
             Button.onClick.AddListener(action);
         }
 
-        public void OnClick()
-        {
-            Button.onClick?.Invoke();
-        }
-
         public void SetImage(Image image)
         {
             Image = image;
