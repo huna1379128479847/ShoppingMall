@@ -4,7 +4,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float _speed = 5.0f;
     [SerializeField] private float gridSize = 1.0f; // マス目のサイズ
-    [SerializeField] private string obstacleTag = "Obstacle"; // 移動を妨げるオブジェクトのタグ
+    [SerializeField] private string obstacleTag = "Wall"; // 移動を妨げるオブジェクトのタグ
 
     private Vector3 targetPos;
 
@@ -27,10 +27,8 @@ public class Player : MonoBehaviour
             // マス目の位置にスナップさせる
             Vector3 snappedPos = GetSnappedPosition(worldPos);
 
-            // クリック位置に障害物がないか確認
-            if ((Mathf.Approximately(transform.position.x, snappedPos.x) ||
-                 Mathf.Approximately(transform.position.y, snappedPos.y)) &&
-                !IsObstacleAtClickedPosition(snappedPos))
+            // クリック位置に障害物（Wallというタグを持ってる）がないか確認
+            if ((Mathf.Approximately(transform.position.x, snappedPos.x) ||Mathf.Approximately(transform.position.y, snappedPos.y)) &&!IsObstacleAtClickedPosition(snappedPos))
             {
                 targetPos = snappedPos;
             }
