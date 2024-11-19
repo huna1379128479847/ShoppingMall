@@ -9,9 +9,9 @@ namespace Verse
 {
     public class InMapDirecter : MonoBehaviour
     {
-        [SerializeField] GameObject _uiPanel;
+        [SerializeField] UIPanelManager _uiPanel;
 
-        public void OpenPanel() => _uiPanel.SetActive(true);
-        public void ClosePanel() => _uiPanel.SetActive(false);
+        public void OpenPanel() => _uiPanel.OpenPanel(UIPanel.MapSelect);
+        public void ClosePanel() => _uiPanel.ClosePanel();
     }
 }
