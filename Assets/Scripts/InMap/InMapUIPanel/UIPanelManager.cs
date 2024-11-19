@@ -1,4 +1,5 @@
 ﻿using BlackOut.UI;
+using BlackOut.Utility;
 using System;
 using UnityEngine;
 
@@ -55,6 +56,7 @@ namespace Verse
             _mapZoom?.SetActive(false);
             _itemBox?.SetActive(false);
             _currentUI = UIPanel.None;
+            GameSpeedHelper.Play();
         }
         public void OpenItemBox()
         {
@@ -64,11 +66,13 @@ namespace Verse
         public void OpenZoomMap()
         {
             Open(UIPanel.MapZoom);
+            GameSpeedHelper.Pause();
         }
 
         public void OpenMapSelecter()
         {
             Open(UIPanel.MapSelect);
+            GameSpeedHelper.Pause();
         }
 
         private void Open(UIPanel uI)

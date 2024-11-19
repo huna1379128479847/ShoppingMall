@@ -17,15 +17,14 @@ namespace Verse
                 Debug.LogError("TextObjがアタッチされていません");
                 return null;
             }
-            GameObject gameObj = Instantiate(TextObj.gameObject, Canvas.transform);
-            FollowTextVM follow = gameObj.GetComponent<FollowTextVM>();
+            FollowTextVM follow = Instantiate(TextObj, Canvas.transform);
             if (hide)
             {
                 follow.Hide();
             }
             follow.SetTarget(target);
             Debug.Log("生成完了");
-            return follow as IFollowTextUI;
+            return follow;
         }
 
         public void DestroyPopUp(FollowTextVM followObject)
