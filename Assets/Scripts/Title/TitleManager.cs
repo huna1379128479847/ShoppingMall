@@ -1,11 +1,11 @@
-﻿using System;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using BlackOut.Utility;
 using BlackOut;
 using BlackOut.UI;
+using System;
+using UnityEngine.Events;
 
 namespace Verse
 {
@@ -14,6 +14,7 @@ namespace Verse
         // シングルトン用のインスタンス保持
         private static TitleDirecter _instance;
 
+        [Header("ボタン")]
         // フィールド
         [SerializeField] ButtonVM start;
         [SerializeField] ButtonVM end;
@@ -36,25 +37,22 @@ namespace Verse
                 Destroy(gameObject);
                 return;
             }
-            _changer = new SceneChanger(SceneManager.GetActiveScene());
+            _changer = _changer ?? new SceneChanger(SceneManager.GetActiveScene());
         }
 
         public void Start()
         {
             if (start != null)
             {
-                start.SetOnClick(GotoTutorial);
-                start.SetText("スタート");
+                ConfigureButton(start, "スタート", GotoTutorial);
             }
             if (cont != null)
             {
-                cont.SetOnClick(GoToSaveList);
-                cont.SetText("続ける");
+                ConfigureButton(cont, "続ける", GoToSaveList);
             }
             if (end != null)
-            {
-                end.SetOnClick(End);
-                end.SetText("終わる");
+            {;
+                ConfigureButton(end, "終わる", End);
             }
         }
         public void SetSceneChanger(ISceneChanger changer)
@@ -90,6 +88,15 @@ namespace Verse
         private void GoToSaveList()
         {
             
+        }
+
+        private void ConfigureButton(ButtonVM button, string text, UnityAction onClick)
+        {
+            if (button != null)
+            {
+                button.SetOnClick(onClick);
+                button.SetText(text);
+            }
         }
     }
 }

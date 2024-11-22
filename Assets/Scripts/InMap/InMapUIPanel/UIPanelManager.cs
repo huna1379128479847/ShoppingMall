@@ -1,11 +1,7 @@
 ﻿using BlackOut.UI;
+using BlackOut.Utility;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Verse
 {
@@ -25,11 +21,14 @@ namespace Verse
         [SerializeField] GameObject _itemBox;
 
         [SerializeField] ButtonVM _openItemBox;
+        [SerializeField] ButtonVM _openZoomMap;
 
         public void Start()
         {
             _openItemBox?.SetOnClick(OpenItemBox);
             _openItemBox?.SetText("アイテムボックス");
+
+            _openZoomMap?.SetOnClick(OpenZoomMap);
         }
         public void OpenPanel(UIPanel ui)
         {
@@ -57,16 +56,41 @@ namespace Verse
             _mapZoom?.SetActive(false);
             _itemBox?.SetActive(false);
             _currentUI = UIPanel.None;
+            GameSpeedHelper.Play();
         }
-        private void OpenItemBox()
+        public void OpenItemBox()
         {
-            if (_currentUI == UIPanel.ItemBox)
+            Open(UIPanel.ItemBox);
+        }
+
+        public void OpenZoomMap()
+        {
+            Open(UIPanel.MapZoom);
+            GameSpeedHelper.Pause();
+        }
+
+        public void OpenMapSelecter()
+        {
+            Open(UIPanel.MapSelect);
+            GameSpeedHelper.Pause();
+        }
+
+        private void Open(UIPanel uI)
+        {
+            if (_currentUI == uI)
             {
                 ClosePanel();
             }
             else
             {
-                OpenPanel(UIPanel.ItemBox);
+                OpenPanel(uI);
+            }
+        }
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) && _currentUI != UIPanel.None)
+            {
+                ClosePanel();
             }
         }
     }
