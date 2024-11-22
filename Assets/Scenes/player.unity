@@ -816,6 +816,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2552476176547826697, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2552476176547826697, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2552476176547826697, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
       objectReference: {fileID: 0}
@@ -853,6 +861,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2552476176547826697, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733612467611922079, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fee9bf0c2251d6040b6bc054ecee5d9c, type: 3}
+    - target: {fileID: 2733612467611922079, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733612467611922079, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733612467611922079, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733612467611922079, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733612467611922079, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
+      propertyPath: m_SpriteSortPoint
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3131446705165545241, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
@@ -900,6 +932,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1279080229494200943, guid: cee494c4214c90e4aa9c6364ecd53c07, type: 3}
+      propertyPath: _cols
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279080229494200943, guid: cee494c4214c90e4aa9c6364ecd53c07, type: 3}
+      propertyPath: _rows
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7876864215669551535, guid: cee494c4214c90e4aa9c6364ecd53c07, type: 3}
       propertyPath: m_Name
       value: Ground

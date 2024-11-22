@@ -26,4 +26,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EffectCanvas.unity
     guid: c295fc78d614619479d03b8bd69e2a7f
+  - enabled: 1
+    path: Assets/Scenes/Stage3.unity
+    guid: 41af188354948f34f82fa182bb8ebe9a
+  - enabled: 1
+    path: Assets/Scenes/Stage1.unity
+    guid: 96a355fc7a80a844da8647f95728cd9b
+  - enabled: 1
+    path: Assets/Scenes/Stage4.unity
+    guid: dc72b42ca178cea4ea98518cb950b8a8
+  - enabled: 1
+    path: Assets/Scenes/Stage5.unity
+    guid: add69a00468e59546b8ed2145d85fd75
+  - enabled: 1
+    path: Assets/Scenes/Stage6.unity
+    guid: 07148442c35f9a446bdd96c6dfdc6dc3
+  - enabled: 1
+    path: Assets/Scenes/Stage7.unity
+    guid: 9e76f63943de845438fb17be40c046ac
   m_configObjects: {}
