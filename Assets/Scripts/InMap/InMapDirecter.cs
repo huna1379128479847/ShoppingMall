@@ -9,6 +9,9 @@ namespace Verse
 {
     public class InMapDirecter : MonoBehaviour
     {
+        [SerializeField] UIPanelManager _uiPanel;
 
+        public void OpenPanel() => _uiPanel.OpenPanel(UIPanel.MapSelect);
+        public void ClosePanel() => _uiPanel.ClosePanel();
     }
 }
