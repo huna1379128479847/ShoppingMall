@@ -813,6 +813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stairs
       objectReference: {fileID: 0}
+    - target: {fileID: 6344197869269822774, guid: b81f1296392531b41a7bb606bddfbe83, type: 3}
+      propertyPath: m_TagString
+      value: stairs
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
