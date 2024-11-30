@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - wall
+  - MovementAnchor
   layers:
   - Default
   - TransparentFX
