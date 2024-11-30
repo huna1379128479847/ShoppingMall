@@ -51,9 +51,4 @@ namespace BlackOut
     {
         ISceneManagement Execute(string[] args);
     }
-
-    public interface IMakePath
-    {
-        List<Vector3> GetPath(Vector3 from, Vector3 to);
-    }
 }
