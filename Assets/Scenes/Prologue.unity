@@ -292,6 +292,7 @@ MonoBehaviour:
   - "PM\u30003:10..."
   ENDName: "BLACK\u3000OUT"
   animationTime: 1
+  StartTime: 2
 --- !u!4 &285619617
 Transform:
   m_ObjectHideFlags: 0
@@ -469,7 +470,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u3042\u3044\u3046\u3048\u304A"
+  m_Text: 
 --- !u!222 &1045701393
 CanvasRenderer:
   m_ObjectHideFlags: 0

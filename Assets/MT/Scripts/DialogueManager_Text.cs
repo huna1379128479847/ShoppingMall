@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections;
 
 public class DialogueManager_Text : MonoBehaviour
 {
@@ -19,12 +20,18 @@ public class DialogueManager_Text : MonoBehaviour
     private int currentDialogueIndex = -1; // 現在のセリフのインデックス
     public string ENDName = "The End"; // 会話終了後のテキスト
     public float animationTime = 3.0f; // テキストアニメーションの時間
+    public float StartTime = 2f;
+
 
     void Start()
     {
+        StartCoroutine(STARTTIME());
+    }
+    IEnumerator STARTTIME()
+    {
+        yield return new WaitForSeconds(StartTime);
         UpdateDialogue(); // 会話を初期化
     }
-
     public void UpdateDialogue()
     {
         currentDialogueIndex++; // 次のセリフに進む
