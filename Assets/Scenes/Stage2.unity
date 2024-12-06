@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6344197869269822774, guid: b81f1296392531b41a7bb606bddfbe83, type: 3}
       propertyPath: m_TagString
-      value: stairs
+      value: ToFirstFloor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1391,7 +1391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6344197869269822774, guid: b81f1296392531b41a7bb606bddfbe83, type: 3}
       propertyPath: m_TagString
-      value: stairs
+      value: ToThirdFloor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
