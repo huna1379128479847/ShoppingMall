@@ -15,6 +15,7 @@ public static class ItemCheck
     private static bool item_Metal_bat = false;
     private static bool item_Robot_Parts = false;
     private static bool item_Boss_info = false;
+    private static bool item_Sweets = false;
 
     public static bool Item_Key
     {
@@ -145,6 +146,18 @@ public static class ItemCheck
         set
         {
             item_Boss_info = value;
+        }
+    }
+
+    public static bool Item_Sweets
+    {
+        get
+        {
+            return item_Sweets;
+        }
+        set
+        {
+            item_Sweets = value;
         }
     }
 }
