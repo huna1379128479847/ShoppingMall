@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage2.unity
     guid: 047404983526d7e4f8cbc83a6cdf2461
+  - enabled: 1
+    path: Assets/Scenes/ENDJudgment.unity
+    guid: f46e09b4222ae844e8efc180efd5181b
   m_configObjects: {}
