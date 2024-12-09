@@ -15,11 +15,23 @@ public class ENDJudgment : MonoBehaviour
     private bool END4_Route = false;
     //private bool ENDSecret_Route = false;
 
+    [SerializeField] private GameObject PopUp;
+    [SerializeField] private GameObject NO_ENDING;
+
 
     public bool Item_Key;
     public bool Item_Salt;
     public bool Item_Setting_materials_collection;
 
+    void Start()
+    {
+        PopUp.SetActive(false);
+        NO_ENDING.SetActive(false);
+    }
+    public void PopUp_Active()
+    {
+        PopUp.SetActive(true);
+    }
     void Update()
     {
         // if(ItemCheck.Item_Key && ItemCheck.Item_Salt && ItemCheck.Item_Setting_materials_collection == true)  // エンディング1の条件
@@ -78,6 +90,11 @@ public class ENDJudgment : MonoBehaviour
             Debug.Log("現在該当ENDがありません");
         }
     }
+    IEnumerator Hidden_Message()
+    {
+        yield return new WaitForSeconds(3);
+        NO_ENDING.SetActive(false);
+    }
     public void Judgment()//ON Clickで設定
     {
         if(END1_Route == true)
@@ -100,5 +117,31 @@ public class ENDJudgment : MonoBehaviour
         // {
         //     END_Secret.SceneLoad();
         // }
+        else
+        {
+            NO_ENDING.SetActive(true);
+            StartCoroutine(Hidden_Message());
+        }
     }
+
+    public void NOButton()
+    {
+        PopUp.gameObject.SetActive(false);
+    }
+
+    void KeyJudge()
+    {   
+        if(PopUp == true)
+        {
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                Judgment();
+            }
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                PopUp.gameObject.SetActive(false);
+            }
+        }
+    }
+
 }
