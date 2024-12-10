@@ -21,6 +21,7 @@ public class DialogueManager_Text : MonoBehaviour
     public string ENDName = "The End"; // 会話終了後のテキスト
     public float animationTime = 3.0f; // テキストアニメーションの時間
     public float StartTime = 2f;
+    [SerializeField] private SceneLoadManager GAME;
 
 
     void Start()
@@ -46,7 +47,18 @@ public class DialogueManager_Text : MonoBehaviour
         else
         {
             // 会話終了処理
-            Debug.Log("END");
+            TextBox.text = ENDName;
+            Debug.Log(TextBox.text);
+            nextButton.interactable = false;
+            StartCoroutine(StageLoad());
+
         }
+    }
+    IEnumerator StageLoad()
+    {
+        TextBox.DOFade(0f,1.5f);
+        yield return new WaitForSeconds(2);
+        
+        GAME.SceneLoad();
     }
 }
