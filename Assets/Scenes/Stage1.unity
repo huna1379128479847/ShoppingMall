@@ -340,6 +340,8 @@ GameObject:
   m_Component:
   - component: {fileID: 253211117}
   - component: {fileID: 253211116}
+  - component: {fileID: 253211119}
+  - component: {fileID: 253211118}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -377,6 +379,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &253211118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253211115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c2cf8026a95af478d342735990813b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 712858259}
+--- !u!114 &253211119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253211115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc66d8d9d6931bf408103666a6acce01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &376951937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,6 +839,10 @@ PrefabInstance:
     - target: {fileID: 6344197869269822774, guid: b81f1296392531b41a7bb606bddfbe83, type: 3}
       propertyPath: m_Name
       value: stairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344197869269822774, guid: b81f1296392531b41a7bb606bddfbe83, type: 3}
+      propertyPath: m_TagString
+      value: ToSecondFloor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
