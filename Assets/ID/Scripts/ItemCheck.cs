@@ -160,4 +160,24 @@ public static class ItemCheck
             item_Sweets = value;
         }
     }
+
+    public static int GetItemCount()
+    {
+        int count = 0;
+
+        if (Item_Key) count++;
+        if (Item_Camera) count++;
+        if (Item_DelayClock) count++;
+        if (Item_Accelerometer) count++;
+        if (Item_Throwing_Support) count++;
+        if (Item_Loudspeaker) count++;
+        if (Item_Salt) count++;
+        if (Item_A_cushion_that_ruins_people) count++;
+        if (Item_Metal_bat) count++;
+        if (Item_Robot_Parts) count++;
+        if (Item_Boss_info) count++;
+        if (Item_Sweets) count++;
+
+        return count;  // 所持アイテム数を返す
+    }
 }
