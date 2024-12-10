@@ -32,4 +32,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage1.unity
     guid: 96a355fc7a80a844da8647f95728cd9b
+  - enabled: 1
+    path: Assets/Scenes/END1.unity
+    guid: 3113bd99d93dcb74baf77a96f543cec3
+  - enabled: 1
+    path: Assets/Scenes/END2.unity
+    guid: c77c59435b454204c84ce267959245a7
+  - enabled: 1
+    path: Assets/Scenes/END3.unity
+    guid: 1962d046ccf5974418ee970ccc8c004e
+  - enabled: 1
+    path: Assets/Scenes/END4.unity
+    guid: dc7f4d587c4805a48bfd3953bff7d830
+  - enabled: 1
+    path: Assets/Scenes/Entity.unity
+    guid: 0e4919e12ee92a54dbb04a95467d7d6f
+  - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: d034a8eba1708554d89eb8c14262abd6
+  - enabled: 1
+    path: Assets/Scenes/Stage2.unity
+    guid: 047404983526d7e4f8cbc83a6cdf2461
+  - enabled: 1
+    path: Assets/Scenes/ENDJudgment.unity
+    guid: f46e09b4222ae844e8efc180efd5181b
   m_configObjects: {}
