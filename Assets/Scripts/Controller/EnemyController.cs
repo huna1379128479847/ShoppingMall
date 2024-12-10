@@ -17,7 +17,8 @@ namespace BlackOut
         [SerializeField] string _checkTag = "MovementAnchor";
         [SerializeField] float _moveTime = 10f;
         [SerializeField] bool _isLoop = true;
-        [SerializeField] Ease ease = Ease.Linear;
+        [SerializeField] Ease _ease = Ease.Linear;
+        [SerializeField] LoopType _type;
 
         [Header("デバッグ")]
         [SerializeField] private List<Transform> _anchors = new List<Transform>();
@@ -29,6 +30,11 @@ namespace BlackOut
         protected virtual void Start()
         {
             _makePath = new MakePath();
+#if UNITY_EDITOR
+            loopType = _type;
+            time = _moveTime;
+            ease = _ease;
+#endif
             if (GetPath() && IsMove)
                 MoveBehaviour();
         }
@@ -70,16 +76,34 @@ namespace BlackOut
         public virtual void MoveBehaviour()
         {
             var pathTweener = transform.DOPath(_movePoint.ToArray(), _moveTime)
-                    .SetEase(ease);
+                    .SetEase(_ease);
 
             if (_isLoop)
             {
-                pathTweener.SetLoops(-1, LoopType.Incremental);
+                pathTweener.SetLoops(-1, _type);
             }
         }
         private void OnDestroy()
         {
             transform.DOKill();
         }
+
+#if UNITY_EDITOR
+        private LoopType loopType;
+        private Ease ease;
+        private float time;
+        private void Update()
+        {
+            if (ease != _ease || loopType != _type || time != _moveTime)
+            {
+                transform.DOKill();
+                transform.position = _movePoint[_movePoint.Count - 1];
+                MoveBehaviour();
+                loopType = _type;
+                time = _moveTime;
+                ease = _ease;
+            }
+        }
+#endif
     }
 }
