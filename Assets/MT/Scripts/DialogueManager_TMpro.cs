@@ -7,6 +7,7 @@ using DG.Tweening;
 public class DialogueManager_TMpro : MonoBehaviour
 {
     public TextMeshProUGUI TextBox;
+    public Image Button_image;
     public Button nextButton;
 
     // 会話リスト
@@ -29,6 +30,7 @@ public class DialogueManager_TMpro : MonoBehaviour
     { 
         var sequence = DOTween.Sequence();
         sequence.Append(TextBox.DOFade(0f,1.5f));//フィードアウト
+        sequence.Join(Button_image.DOFade(0f,1.5f));//フィードアウト
         sequence.AppendInterval(0.2f).OnComplete(UPText);
         currentDialogueIndex++;
         
@@ -39,15 +41,19 @@ public class DialogueManager_TMpro : MonoBehaviour
     {
         if (currentDialogueIndex < conversation.Count)
         {
+            var sequence = DOTween.Sequence();
             TextBox.text = conversation[currentDialogueIndex];
             Debug.Log(TextBox.text);
-            TextBox.DOFade(1f,1f);
+            sequence.Append(TextBox.DOFade(1f,1f));
+            sequence.Join(Button_image.DOFade(1f,1f));
         }
         else
         {
             // 会話が終了したらボタンを無効化
+            var sequence = DOTween.Sequence();
             TextBox.text = ENDName;
-            TextBox.DOFade(1f,1f);
+            sequence.Append(TextBox.DOFade(1f,1f));
+            sequence.Join(Button_image.DOFade(0f,1f));
             Debug.Log(TextBox.text);
             nextButton.interactable = false;
         }

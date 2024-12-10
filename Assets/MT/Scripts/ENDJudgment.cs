@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ENDJudgment : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class ENDJudgment : MonoBehaviour
 
     [SerializeField] private GameObject PopUp;
     [SerializeField] private GameObject NO_ENDING;
+    [SerializeField] private Button EnterButton;
 
 
     public bool Item_Key;
@@ -94,6 +96,7 @@ public class ENDJudgment : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         NO_ENDING.SetActive(false);
+        EnterButton.interactable = true;
     }
     public void Judgment()//ON Clickで設定
     {
@@ -120,6 +123,7 @@ public class ENDJudgment : MonoBehaviour
         else
         {
             NO_ENDING.SetActive(true);
+            EnterButton.interactable = false;
             StartCoroutine(Hidden_Message());
         }
     }
