@@ -36,50 +36,7 @@ public class ENDJudgment : MonoBehaviour
     }
     void Update()
     {
-        // if(ItemCheck.Item_Key && ItemCheck.Item_Salt && ItemCheck.Item_Setting_materials_collection == true)  // エンディング1の条件
-        // {
-        //     END1_Route = true;
-        //     END2_Route = false;
-        //     END3_Route = false;
-        //     END4_Route = false;
-        //     Debug.Log("END1ルート");
-        // }
-        // else if(ItemCheck.Item_Loudspeaker && ItemCheck.Item_Alarm_clock && ItemCheck.watch == true)// エンディング2の条件
-        // {
-        //     END1_Route = false;
-        //     END2_Route = true;
-        //     END3_Route = false;
-        //     END4_Route = false;
-        //     Debug.Log("END2ルート");
-        // }
-        // else if(ItemCheck.Item_Camera && ItemCheck.Item_Metal_bat && ItemCheck.ball == true)// エンディング3の条件
-        // {
-        //     END1_Route = false;
-        //     END2_Route = false;
-        //     END3_Route = true;
-        //     END4_Route = false;
-        //     Debug.Log("END3ルート");
-        // }
-        // else if(ItemCheck.Item_Robot_Parts && ItemCheck.Item_A_Cushion_that_ruins_people && ItemCheck.sweets == true)// エンディング4の条件
-        // {
-        //     END1_Route = false;
-        //     END2_Route = false;
-        //     END3_Route = false;
-        //     END4_Route = true;
-        //     Debug.Log("END4ルート");
-        // }
-        // else if(SecretCount == 20)
-        // {
-            
-        //     END1_Route = true;
-        //     END2_Route = false;
-        //     END3_Route = false;
-        //     END4_Route = false;
-        //     ENDSecret_Route = true;
-        //     Debug.Log("ENDSecretルート");
-        // }
-
-        if(Item_Key && Item_Salt && Item_Setting_materials_collection == true)  // エンディング1の条件
+        if(ItemCheck.Item_Key && ItemCheck.Item_Salt && ItemCheck.Item_Setting_materials_collection == true)  // エンディング1の条件
         {
             END1_Route = true;
             END2_Route = false;
@@ -87,6 +44,31 @@ public class ENDJudgment : MonoBehaviour
             END4_Route = false;
             Debug.Log("END1ルート");
         }
+        else if(ItemCheck.Item_Loudspeaker && ItemCheck.Item_Alarm_clock && ItemCheck.Item_watch == true)// エンディング2の条件
+        {
+            END1_Route = false;
+            END2_Route = true;
+            END3_Route = false;
+            END4_Route = false;
+            Debug.Log("END2ルート");
+        }
+        else if(ItemCheck.Item_Camera && ItemCheck.Item_Metal_bat && ItemCheck.Item_Ball == true)// エンディング3の条件
+        {
+            END1_Route = false;
+            END2_Route = false;
+            END3_Route = true;
+            END4_Route = false;
+            Debug.Log("END3ルート");
+        }
+        else if(ItemCheck.Item_Robot_Parts && ItemCheck.Item_Cushion_that_ruins_people && ItemCheck.Item_Sweets == true)// エンディング4の条件
+        {
+            END1_Route = false;
+            END2_Route = false;
+            END3_Route = false;
+            END4_Route = true;
+            Debug.Log("END4ルート");
+        }
+
         else
         {
             Debug.Log("現在該当ENDがありません");

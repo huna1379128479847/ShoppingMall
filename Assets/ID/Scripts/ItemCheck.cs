@@ -6,15 +6,15 @@ public static class ItemCheck
 {
     private static bool item_Key = false;
     private static bool item_Camera = false;
-    private static bool item_DelayClock = false;
-    private static bool item_Accelerometer = false;
-    private static bool item_Throwing_Support = false;
+    private static bool item_Alarm_clock = false;
+    private static bool item_watch = false;
+    private static bool item_Ball = false;
     private static bool item_Loudspeaker = false;
     private static bool item_Salt = false;
-    private static bool item_A_cushion_that_ruins_people = false;
+    private static bool item_Cushion_that_ruins_people = false;
     private static bool item_Metal_bat = false;
     private static bool item_Robot_Parts = false;
-    private static bool item_Boss_info = false;
+    private static bool item_Setting_materials_collection = false;
     private static bool item_Sweets = false;
 
     public static bool Item_Key
@@ -41,39 +41,39 @@ public static class ItemCheck
         }
     }
 
-    public static bool Item_DelayClock
+    public static bool Item_Alarm_clock
     {
         get
         {
-            return item_DelayClock;
+            return item_Alarm_clock;
         }
         set
         {
-            item_DelayClock = value;
+            item_Alarm_clock = value;
         }
     }
 
-    public static bool Item_Accelerometer
+    public static bool Item_watch
     {
         get
         {
-            return item_Accelerometer;
+            return item_watch;
         }
         set
         {
-            item_Accelerometer = value;
+            item_watch = value;
         }
     }
 
-    public static bool Item_Throwing_Support
+    public static bool Item_Ball
     {
         get
         {
-            return item_Throwing_Support;
+            return item_Ball;
         }
         set
         {
-            item_Throwing_Support = value;
+            item_Ball = value;
         }
     }
 
@@ -101,15 +101,15 @@ public static class ItemCheck
         }
     }
 
-    public static bool Item_A_cushion_that_ruins_people
+    public static bool Item_Cushion_that_ruins_people
     {
         get
         {
-            return item_A_cushion_that_ruins_people;
+            return item_Cushion_that_ruins_people;
         }
         set
         {
-            item_A_cushion_that_ruins_people = value;
+            item_Cushion_that_ruins_people = value;
         }
     }
 
@@ -137,15 +137,15 @@ public static class ItemCheck
         }
     }
 
-    public static bool Item_Boss_info
+    public static bool Item_Setting_materials_collection
     {
         get
         {
-            return item_Boss_info;
+            return item_Setting_materials_collection;
         }
         set
         {
-            item_Boss_info = value;
+            item_Setting_materials_collection = value;
         }
     }
 
@@ -167,15 +167,15 @@ public static class ItemCheck
 
         if (Item_Key) count++;
         if (Item_Camera) count++;
-        if (Item_DelayClock) count++;
-        if (Item_Accelerometer) count++;
-        if (Item_Throwing_Support) count++;
+        if (item_Alarm_clock) count++;
+        if (item_watch) count++;
+        if (Item_Ball) count++;
         if (Item_Loudspeaker) count++;
         if (Item_Salt) count++;
-        if (Item_A_cushion_that_ruins_people) count++;
+        if (Item_Cushion_that_ruins_people) count++;
         if (Item_Metal_bat) count++;
         if (Item_Robot_Parts) count++;
-        if (Item_Boss_info) count++;
+        if (Item_Setting_materials_collection) count++;
         if (Item_Sweets) count++;
 
         return count;  // 所持アイテム数を返す

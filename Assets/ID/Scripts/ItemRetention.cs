@@ -28,21 +28,21 @@ public class ItemRetention : MonoBehaviour
             stairsScript.MoveToFloor();  //MoveToFloorメソッドの呼び出し
         }
 
-        if(ItemCheck.Item_DelayClock)  // 目覚まし時計を持っているとき
+        if(ItemCheck.Item_Alarm_clock)  // 目覚まし時計を持っているとき
         {
             CompareTag("stairs");  // 階段に触れている場合
             DestroyAllItem();  // 他のすべてのアイテムを破壊
             stairsScript.MoveToFloor();  //MoveToFloorメソッドの呼び出し
         }
 
-        if(ItemCheck.Item_Accelerometer)  // 腕時計を持っているとき
+        if(ItemCheck.Item_watch)  // 腕時計を持っているとき
         {
             CompareTag("stairs");  // 階段に触れている場合
             DestroyAllItem();  // 他のすべてのアイテムを破壊
             stairsScript.MoveToFloor();  //MoveToFloorメソッドの呼び出し
         }
 
-        if(ItemCheck.Item_Throwing_Support)  // を持っているとき
+        if(ItemCheck.Item_Ball)  // を持っているとき
         {
             CompareTag("stairs");  // 階段に触れている場合
             DestroyAllItem();  // 他のすべてのアイテムを破壊
@@ -63,7 +63,7 @@ public class ItemRetention : MonoBehaviour
             stairsScript.MoveToFloor();  //MoveToFloorメソッドの呼び出し
         }
 
-        if(ItemCheck.Item_A_cushion_that_ruins_people)  // クッションを持っているとき
+        if(ItemCheck.Item_Cushion_that_ruins_people)  // クッションを持っているとき
         {
             CompareTag("stairs");  // 階段に触れている場合
             DestroyAllItem();  // 他のすべてのアイテムを破壊
@@ -84,7 +84,7 @@ public class ItemRetention : MonoBehaviour
             stairsScript.MoveToFloor();  //MoveToFloorメソッドの呼び出し
         }
 
-        if(ItemCheck.Item_Boss_info)  // 設定資料集を持っているとき
+        if(ItemCheck.Item_Setting_materials_collection)  // 設定資料集を持っているとき
         {
             CompareTag("stairs");  // 階段に触れている場合
             DestroyAllItem();  // 他のすべてのアイテムを破壊

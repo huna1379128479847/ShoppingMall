@@ -13,7 +13,7 @@ public class InformationManager : MonoBehaviour
         public GameObject No_Data;
         public GameObject Item_Key;
         public GameObject Item_Camera;
-        public GameObject Item_DelayClock;
+        public GameObject Item_Alarm_clock;
         public GameObject Item_Accelerometer;
         public GameObject Item_Throwing_Support;
         public GameObject Item_Loudspeaker;
@@ -99,7 +99,7 @@ public class InformationManager : MonoBehaviour
         Display();
         if(HaveDelayClock == true)
         {
-            Item_DelayClock.SetActive(true);
+            Item_Alarm_clock.SetActive(true);
         }
         else
         {
@@ -358,7 +358,7 @@ public class InformationManager : MonoBehaviour
         No_Data.SetActive(false);
         Item_Key.SetActive(false);
         Item_Camera.SetActive(false);
-        Item_DelayClock.SetActive(false);
+        Item_Alarm_clock.SetActive(false);
         Item_Accelerometer.SetActive(false);
         Item_Throwing_Support.SetActive(false);
         Item_Loudspeaker.SetActive(false);
