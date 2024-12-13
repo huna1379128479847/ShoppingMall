@@ -9,6 +9,7 @@ TagManager:
   - ToSecondFloor
   - ToThirdFloor
   - ToFirstFloor
+  - Key
   layers:
   - Default
   - TransparentFX
