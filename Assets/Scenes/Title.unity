@@ -179,6 +179,8 @@ MonoBehaviour:
   SceneLoadName: Prologue
   EffectSceneName: EffectCanvas
   StockTime: 2
+  SceneLoadName_Simple: 
+  UnloadSceneName_Simple: 
 --- !u!114 &318419008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +754,8 @@ MonoBehaviour:
   SceneLoadName: Gallery
   EffectSceneName: EffectCanvas
   StockTime: 2
+  SceneLoadName_Simple: 
+  UnloadSceneName_Simple: 
 --- !u!1 &1681740370
 GameObject:
   m_ObjectHideFlags: 0

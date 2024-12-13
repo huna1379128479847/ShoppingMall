@@ -20,10 +20,13 @@ public class DialogueManager_TMpro : MonoBehaviour
 
     private int currentDialogueIndex = -1;
     public string ENDName;
+    public GameObject TitleButton;
 
     void Start()
     {
         UpdateDialogue();
+        TitleButton.gameObject.SetActive(false);
+
     }
 
     public void UpdateDialogue()
@@ -56,6 +59,8 @@ public class DialogueManager_TMpro : MonoBehaviour
             sequence.Join(Button_image.DOFade(0f,1f));
             Debug.Log(TextBox.text);
             nextButton.interactable = false;
+            TitleButton.gameObject.SetActive(true);
+
         }
     }
 

@@ -6052,12 +6052,12 @@ MonoBehaviour:
   No_Data: {fileID: 2054002067}
   Item_Key: {fileID: 1152692679}
   Item_Camera: {fileID: 1261525901}
-  Item_DelayClock: {fileID: 880934143}
+  Item_Alarm_clock: {fileID: 0}
   Item_Accelerometer: {fileID: 1512167995}
   Item_Throwing_Support: {fileID: 1136524849}
   Item_Loudspeaker: {fileID: 2095153890}
   Item_Salt: {fileID: 267544158}
-  Item_A_cushion_that_ruins_people: {fileID: 498035875}
+  Item_Cushion_that_ruins_people: {fileID: 0}
   Item_Metal_bat: {fileID: 346384607}
   Item_Robot_Parts: {fileID: 110017991}
   Item_Boss_info: {fileID: 1811887630}
@@ -6122,6 +6122,8 @@ MonoBehaviour:
   SceneLoadName: Title
   EffectSceneName: EffectCanvas
   StockTime: 2
+  SceneLoadName_Simple: 
+  UnloadSceneName_Simple: 
 --- !u!1 &1347194940
 GameObject:
   m_ObjectHideFlags: 0
@@ -9764,7 +9766,7 @@ GameObject:
   - component: {fileID: 2136416863}
   - component: {fileID: 2136416862}
   m_Layer: 5
-  m_Name: A_cushion_that_ruins_people
+  m_Name: Item_A_cushion_that_ruins_people
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

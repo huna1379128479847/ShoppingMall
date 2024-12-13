@@ -18,7 +18,7 @@ public class InformationManager : MonoBehaviour
         public GameObject Item_Throwing_Support;
         public GameObject Item_Loudspeaker;
         public GameObject Item_Salt;
-        public GameObject Item_A_cushion_that_ruins_people;
+        public GameObject Item_Cushion_that_ruins_people;
         public GameObject Item_Metal_bat;
         public GameObject Item_Robot_Parts;
         public GameObject Item_Boss_info;
@@ -159,7 +159,7 @@ public class InformationManager : MonoBehaviour
         Display();
         if(HaveA_Cushion_that_ruins_people == true)
         {
-            Item_A_cushion_that_ruins_people .SetActive(true);
+            Item_Cushion_that_ruins_people .SetActive(true);
         }
         else
         {
@@ -363,7 +363,7 @@ public class InformationManager : MonoBehaviour
         Item_Throwing_Support.SetActive(false);
         Item_Loudspeaker.SetActive(false);
         Item_Salt.SetActive(false);
-        Item_A_cushion_that_ruins_people.SetActive(false);
+        Item_Cushion_that_ruins_people.SetActive(false);
         Item_Metal_bat.SetActive(false);
         Item_Robot_Parts.SetActive(false);
         Item_Boss_info.SetActive(false);
