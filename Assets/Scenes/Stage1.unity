@@ -865,6 +865,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c4410b52c5d3047a9c1cd4793b4ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroySceneName: Stage1
+  SceneLoadName: 
+  EffectSceneName: 
+  StockTime: 2
+  SceneLoadName_Simple: 
+  UnloadSceneName_Simple: 
 --- !u!4 &685690685
 Transform:
   m_ObjectHideFlags: 0
@@ -1177,6 +1183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c4410b52c5d3047a9c1cd4793b4ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroySceneName: Stage1
+  SceneLoadName: 
+  EffectSceneName: 
+  StockTime: 2
+  SceneLoadName_Simple: 
+  UnloadSceneName_Simple: 
 --- !u!4 &906285308
 Transform:
   m_ObjectHideFlags: 0
@@ -1421,7 +1433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &952981979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1589,9 +1601,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1650160354}
+      - m_Target: {fileID: 1650160357}
         m_TargetAssemblyTypeName: ENDJudgment, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: NOButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1866,6 +1878,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c4410b52c5d3047a9c1cd4793b4ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroySceneName: Stage1
+  SceneLoadName: 
+  EffectSceneName: 
+  StockTime: 2
+  SceneLoadName_Simple: 
+  UnloadSceneName_Simple: 
 --- !u!4 &1160966879
 Transform:
   m_ObjectHideFlags: 0
@@ -2049,7 +2067,7 @@ GameObject:
   - component: {fileID: 1504085221}
   m_Layer: 0
   m_Name: EXIT
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2083,7 +2101,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2116,7 +2134,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1650160357}
           m_TargetAssemblyTypeName: ENDJudgment, Assembly-CSharp
           m_MethodName: PopUp_Active
           m_Mode: 1
@@ -2168,7 +2186,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.019560833, g: 0.6037736, b: 0, a: 1}
   m_FlipX: 0
@@ -2278,9 +2296,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1650160354}
+      - m_Target: {fileID: 1650160357}
         m_TargetAssemblyTypeName: ENDJudgment, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Judgment
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2554,6 +2572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1650160356}
+  - component: {fileID: 1650160357}
   m_Layer: 0
   m_Name: setting
   m_TagString: Untagged
@@ -2576,6 +2595,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1650160357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650160354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f061b75f5df7445a9645ddb76d4ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  END_1: {fileID: 685690684}
+  END_2: {fileID: 1160966878}
+  END_3: {fileID: 1898283012}
+  END_4: {fileID: 906285307}
+  PopUp: {fileID: 952981978}
+  NO_ENDING: {fileID: 1698030424}
+  EnterButton: {fileID: 1550399008}
+  Item_Key: 0
+  Item_Salt: 0
+  Item_Setting_materials_collection: 0
 --- !u!1 &1660223162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,6 +3421,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c4410b52c5d3047a9c1cd4793b4ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DestroySceneName: Stage1
+  SceneLoadName: 
+  EffectSceneName: 
+  StockTime: 2
+  SceneLoadName_Simple: 
+  UnloadSceneName_Simple: 
 --- !u!4 &1898283013
 Transform:
   m_ObjectHideFlags: 0
