@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections;
 
 public class DialogueManager_TMpro : MonoBehaviour
 {
@@ -24,13 +25,16 @@ public class DialogueManager_TMpro : MonoBehaviour
 
     void Start()
     {
+        nextButton.interactable = false;
         UpdateDialogue();
+        
         TitleButton.gameObject.SetActive(false);
 
     }
 
     public void UpdateDialogue()
     { 
+        nextButton.interactable = false;
         var sequence = DOTween.Sequence();
         sequence.Append(TextBox.DOFade(0f,1.5f));//フィードアウト
         sequence.Join(Button_image.DOFade(0f,1.5f));//フィードアウト
@@ -46,6 +50,8 @@ public class DialogueManager_TMpro : MonoBehaviour
         {
             var sequence = DOTween.Sequence();
             TextBox.text = conversation[currentDialogueIndex];
+            
+            StartCoroutine(Button_false());
             Debug.Log(TextBox.text);
             sequence.Append(TextBox.DOFade(1f,1f));
             sequence.Join(Button_image.DOFade(1f,1f));
@@ -55,13 +61,17 @@ public class DialogueManager_TMpro : MonoBehaviour
             // 会話が終了したらボタンを無効化
             var sequence = DOTween.Sequence();
             TextBox.text = ENDName;
+            nextButton.interactable = false;
             sequence.Append(TextBox.DOFade(1f,1f));
             sequence.Join(Button_image.DOFade(0f,1f));
             Debug.Log(TextBox.text);
-            nextButton.interactable = false;
             TitleButton.gameObject.SetActive(true);
 
         }
     }
-
+        IEnumerator Button_false()
+    {
+        yield return new WaitForSeconds(1);
+        nextButton.interactable = true;
+    }
 }

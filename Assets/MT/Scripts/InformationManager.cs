@@ -14,52 +14,58 @@ public class InformationManager : MonoBehaviour
         public GameObject Item_Key;
         public GameObject Item_Camera;
         public GameObject Item_Alarm_clock;
-        public GameObject Item_Accelerometer;
-        public GameObject Item_Throwing_Support;
+        public GameObject Item_watch;
+        public GameObject Item_Ball;
         public GameObject Item_Loudspeaker;
         public GameObject Item_Salt;
         public GameObject Item_Cushion_that_ruins_people;
         public GameObject Item_Metal_bat;
         public GameObject Item_Robot_Parts;
-        public GameObject Item_Boss_info;
+        public GameObject Item_Setting_materials_collection;
+        public GameObject Item_Sweets;
 
-
+        public GameObject END_0;
         public GameObject END_1;
         public GameObject END_2;
         public GameObject END_3;
         public GameObject END_4;
+        public GameObject GAMEOVER;
 
 
     [Header("判定関連")]
         public bool HaveKey = false;
         public bool HaveCamera = false;
-        public bool HaveDelayClock = false;
-        public bool HaveAccelerometer = false;
-        public bool HaveThrowing_Support= false;
+        public bool HaveAlarm_clock = false;
+        public bool Havewatch = false;
+        public bool HaveBall= false;
         public bool HaveLoudspeaker = false;
         public bool HaveSalt = false;
-        public bool HaveA_Cushion_that_ruins_people = false;
+        public bool HaveCushion_that_ruins_people = false;
         public bool HaveMetal_bat = false;
         public bool HaveRobot_Parts = false;
-        public bool HaveBoss_info = false;
+        public bool HaveSetting_materials_collection = false;
+        public bool HaveSweets = false;
 
+        public bool Lock_END_0;
         public bool Lock_END_1;
         public bool Lock_END_2;
         public bool Lock_END_3;
         public bool Lock_END_4;
+        public bool Lock_GAMEOVER;
 
     [Header("テキスト関連")]
         public TextMeshProUGUI Name_key;
         public TextMeshProUGUI Name_Camera;
-        public TextMeshProUGUI Name_DelayClock;
-        public TextMeshProUGUI Name_Accelerometer;
-        public TextMeshProUGUI Name_Throwing_Support;
+        public TextMeshProUGUI Name_Alarm_clock;
+        public TextMeshProUGUI Name_watch;
+        public TextMeshProUGUI Name_Ball;
         public TextMeshProUGUI Name_Loudspeaker;
         public TextMeshProUGUI Name_Salt;
-        public TextMeshProUGUI Name_A_cushion_that_ruins_people;
+        public TextMeshProUGUI Name_Cushion_that_ruins_people;
         public TextMeshProUGUI Name_Metal_bat;
         public TextMeshProUGUI Name_Robot_Parts;
-        public TextMeshProUGUI Name_Boss_info;
+        public TextMeshProUGUI Name_Setting_materials_collection;
+        public TextMeshProUGUI Nsme_Sweets;
 
     void Start()
     {
@@ -94,10 +100,10 @@ public class InformationManager : MonoBehaviour
             No_Data.SetActive(true);
         }
     }
-    public void OnButtonClicked_DelayClock()
+    public void OnButtonClicked_Alarm_clock()
     {
         Display();
-        if(HaveDelayClock == true)
+        if(HaveAlarm_clock == true)
         {
             Item_Alarm_clock.SetActive(true);
         }
@@ -106,24 +112,24 @@ public class InformationManager : MonoBehaviour
             No_Data.SetActive(true);
         }
     }
-    public void OnButtonClicked_Accelerometer()
+    public void OnButtonClicked_watch()
     {
         Display();
-        if(HaveAccelerometer == true)
+        if(Havewatch == true)
         {
-            Item_Accelerometer.SetActive(true);
+            Item_watch.SetActive(true);
         }
         else
         {
             No_Data.SetActive(true);
         }
     }
-    public void OnButtonClicked_Throwing_Support()
+    public void OnButtonClicked_Ball()
     {
         Display();
-        if(HaveThrowing_Support == true)
+        if(HaveBall == true)
         {
-            Item_Throwing_Support.SetActive(true);
+            Item_Ball.SetActive(true);
         }
         else
         {
@@ -154,10 +160,10 @@ public class InformationManager : MonoBehaviour
             No_Data.SetActive(true);
         }
     }
-    public void OnButtonClicked_A_cushion_that_ruins_people()
+    public void OnButtonClicked_Cushion_that_ruins_people()
     {
         Display();
-        if(HaveA_Cushion_that_ruins_people == true)
+        if(HaveCushion_that_ruins_people == true)
         {
             Item_Cushion_that_ruins_people .SetActive(true);
         }
@@ -190,12 +196,36 @@ public class InformationManager : MonoBehaviour
             No_Data.SetActive(true);
         }
     }
-    public void OnButtonClicked_Boss_info()
+    public void OnButtonClicked_Setting_materials_collection()
     {
         Display();
-        if(HaveBoss_info == true)
+        if(HaveSetting_materials_collection == true)
         {
-            Item_Boss_info.SetActive(true);
+            Item_Setting_materials_collection.SetActive(true);
+        }
+        else
+        {
+            No_Data.SetActive(true);
+        }
+    }
+    public void OnButtonClicked_Sweets()
+    {
+        Display();
+        if(HaveSweets == true)
+        {
+            Item_Sweets.SetActive(true);
+        }
+        else
+        {
+            No_Data.SetActive(true);
+        }
+    }
+    public void OnButtonClicked_END__0()
+    {
+        Display();
+        if(Lock_END_0 == true)
+        {
+            END_0.SetActive(true);
         }
         else
         {
@@ -250,7 +280,18 @@ public class InformationManager : MonoBehaviour
             No_Data.SetActive(true);
         }
     }
-    
+    public void OnButtonClicked_GAMEOVER()
+    {
+        Display();
+        if(Lock_GAMEOVER == true)
+        {
+            GAMEOVER.SetActive(true);
+        }
+        else
+        {
+            No_Data.SetActive(true);
+        }
+    }
     void NameChange()
     {
         if(HaveKey == true)
@@ -271,31 +312,31 @@ public class InformationManager : MonoBehaviour
             Name_Camera.text = "???";
         }
 
-        if(HaveDelayClock == true)
+        if(HaveAlarm_clock == true)
         {
-            Name_DelayClock.text = "【遅延時計】";
+            Name_Alarm_clock.text = "【遅延時計】";
         }
         else
         {
-            Name_DelayClock.text = "???";
+            Name_Alarm_clock.text = "???";
         }
 
-        if(HaveAccelerometer == true)
+        if(Havewatch == true)
         {
-            Name_Accelerometer.text = "【加速時計】";
+            Name_watch.text = "【加速時計】";
         }
         else
         {
-            Name_Accelerometer.text = "???";
+            Name_watch.text = "???";
         }
 
-        if(HaveThrowing_Support == true)
+        if(HaveBall == true)
         {
-            Name_Throwing_Support.text = "【投擲サポート】";
+            Name_Ball.text = "【ボール】";
         }
         else
         {
-            Name_Throwing_Support.text = "???";
+            Name_Ball.text = "???";
         }
 
         if(HaveLoudspeaker == true)
@@ -316,13 +357,13 @@ public class InformationManager : MonoBehaviour
             Name_Salt.text = "???";
         }
 
-        if(HaveA_Cushion_that_ruins_people == true)
+        if(HaveCushion_that_ruins_people == true)
         {
-            Name_A_cushion_that_ruins_people.text = "【人をダメにするクッション】";
+            Name_Cushion_that_ruins_people.text = "【人をダメにするクッション】";
         }
         else
         {
-            Name_A_cushion_that_ruins_people.text = "???";
+            Name_Cushion_that_ruins_people.text = "???";
         }
 
         if(HaveMetal_bat == true)
@@ -343,13 +384,22 @@ public class InformationManager : MonoBehaviour
             Name_Robot_Parts.text = "???";
         }
 
-        if(HaveBoss_info == true)
+        if(HaveSetting_materials_collection == true)
         {
-            Name_Boss_info.text = "【ボスの情報】";
+            Name_Setting_materials_collection.text = "【設定資料集の情報】";
         }
         else
         {
-            Name_Boss_info.text = "???";
+            Name_Setting_materials_collection.text = "???";
+        }
+
+        if(HaveSweets == true)
+        {
+            Nsme_Sweets.text = "【お菓子の情報】";
+        }
+        else
+        {
+            Nsme_Sweets.text = "???";
         }
     }
     public void Display()
@@ -359,17 +409,20 @@ public class InformationManager : MonoBehaviour
         Item_Key.SetActive(false);
         Item_Camera.SetActive(false);
         Item_Alarm_clock.SetActive(false);
-        Item_Accelerometer.SetActive(false);
-        Item_Throwing_Support.SetActive(false);
+        Item_watch.SetActive(false);
+        Item_Ball.SetActive(false);
         Item_Loudspeaker.SetActive(false);
         Item_Salt.SetActive(false);
         Item_Cushion_that_ruins_people.SetActive(false);
         Item_Metal_bat.SetActive(false);
         Item_Robot_Parts.SetActive(false);
-        Item_Boss_info.SetActive(false);
+        Item_Setting_materials_collection.SetActive(false);
+        Item_Sweets.SetActive(false);
+        END_0.SetActive(false);
         END_1.SetActive(false);
         END_2.SetActive(false);
         END_3.SetActive(false);
         END_4.SetActive(false);
+        GAMEOVER.SetActive(false);
     }
 }

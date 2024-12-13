@@ -98,9 +98,9 @@ public class ENDJudgment : MonoBehaviour
         {
             END_4.SceneLoad();
         }
-        // else if(ENDSecret_Route == true)
+        // else 
         // {
-        //     END_Secret.SceneLoad();
+        //     END_0.SceneLoad();
         // }
         else
         {

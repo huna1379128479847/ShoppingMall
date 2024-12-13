@@ -26,6 +26,7 @@ public class DialogueManager_Text : MonoBehaviour
 
     void Start()
     {
+        nextButton.interactable = false;
         StartCoroutine(STARTTIME());
     }
     IEnumerator STARTTIME()
@@ -42,6 +43,8 @@ public class DialogueManager_Text : MonoBehaviour
             // 現在のセリフをアニメーション表示
             string currentText = conversation[currentDialogueIndex];
             TextBox.text = ""; // テキストをリセット
+            nextButton.interactable = false;
+            StartCoroutine(Button_false());
             TextBox.DOText(currentText, animationTime, true, ScrambleMode.None, null); // テキストアニメーション
         }
         else
@@ -61,4 +64,11 @@ public class DialogueManager_Text : MonoBehaviour
         
         GAME.SceneLoad();
     }
+
+        IEnumerator Button_false()
+    {
+        yield return new WaitForSeconds(1);
+        nextButton.interactable = true;
+    }
 }
+

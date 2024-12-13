@@ -12,26 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Gallery.unity
     guid: c878fdcc6c100e645b881c70b1a2632a
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 55a25f611c2f9954186d55fe39efe89a
+    path: Assets/Scenes/Prologue.unity
+    guid: d034a8eba1708554d89eb8c14262abd6
   - enabled: 1
-    path: Assets/Scenes/InMap.unity
-    guid: 3954c40162443ee42bd90024a6f5a12e
+    path: Assets/Scenes/Stage1.unity
+    guid: 96a355fc7a80a844da8647f95728cd9b
   - enabled: 1
-    path: Assets/Scenes/player.unity
-    guid: b02a615165c44c14fbac1313f32ff6dd
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/EffectCanvas.unity
-    guid: c295fc78d614619479d03b8bd69e2a7f
+    path: Assets/Scenes/Stage2.unity
+    guid: 047404983526d7e4f8cbc83a6cdf2461
   - enabled: 1
     path: Assets/Scenes/Stage3.unity
     guid: 41af188354948f34f82fa182bb8ebe9a
   - enabled: 1
-    path: Assets/Scenes/Stage1.unity
-    guid: 96a355fc7a80a844da8647f95728cd9b
+    path: Assets/Scenes/END0.unity
+    guid: 00b198e49ea088445b9ac9b616649514
   - enabled: 1
     path: Assets/Scenes/END1.unity
     guid: 3113bd99d93dcb74baf77a96f543cec3
@@ -45,15 +39,24 @@ EditorBuildSettings:
     path: Assets/Scenes/END4.unity
     guid: dc7f4d587c4805a48bfd3953bff7d830
   - enabled: 1
+    path: Assets/Scenes/player.unity
+    guid: b02a615165c44c14fbac1313f32ff6dd
+  - enabled: 1
     path: Assets/Scenes/Entity.unity
     guid: 0e4919e12ee92a54dbb04a95467d7d6f
   - enabled: 1
-    path: Assets/Scenes/Prologue.unity
-    guid: d034a8eba1708554d89eb8c14262abd6
-  - enabled: 1
-    path: Assets/Scenes/Stage2.unity
-    guid: 047404983526d7e4f8cbc83a6cdf2461
+    path: Assets/Scenes/InMap.unity
+    guid: 3954c40162443ee42bd90024a6f5a12e
   - enabled: 1
     path: Assets/Scenes/ENDJudgment.unity
     guid: f46e09b4222ae844e8efc180efd5181b
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 55a25f611c2f9954186d55fe39efe89a
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/EffectCanvas.unity
+    guid: c295fc78d614619479d03b8bd69e2a7f
   m_configObjects: {}

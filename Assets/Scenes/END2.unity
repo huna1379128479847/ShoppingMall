@@ -633,7 +633,7 @@ MonoBehaviour:
   - "\u8155\u6642\u8A08\u3067\u6642\u9593\u3092\u78BA\u304B\u3081\u308B\u3088\u3046\u306B\u306A\u3063\u305F\u304A\u304B\u3052\u3067,\u809D\u8A66\u3057\u4EE5\u964D\u306F                       
     \u4E00\u5EA6\u3082\u9045\u523B\u3059\u308B\u3053\u3068\u304C\u7121\u304B\u3063\u305F\u3002"
   ENDName: "END2:\u3010\u5B8C\u5168\u7121\u9045\u523B\u512A\u7B49\u751F\u3011"
-  TitleButton: {fileID: 0}
+  TitleButton: {fileID: 1939042017}
 --- !u!4 &968182787
 Transform:
   m_ObjectHideFlags: 0

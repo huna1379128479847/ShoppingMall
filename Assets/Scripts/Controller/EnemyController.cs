@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using BlackOut.Utility.Logics;
+using BlackOut.Utility.Logics.BlackOut.Utility.Logics;
 using DG.Tweening;
 using UnityEngine;
 
