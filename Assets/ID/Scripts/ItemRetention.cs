@@ -14,15 +14,83 @@ public class ItemRetention : MonoBehaviour
         stairsScript = FindObjectOfType<Stairs>();
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnMouseDown()
     {
-        if (collision.gameObject.CompareTag("Player"))  // プレイヤーが触れたとき
+        if (Input.GetMouseButtonDown(0))
         {
-            if (this.gameObject.CompareTag("Key"))  // タグが"Key"の場合
+            // タグが"Item"であることを確認
+            if (CompareTag("Item"))
             {
-                ItemCheck.Item_Key = true;  // 対応する処理を実行
-                DestroyAllItem();  // 他のすべてのアイテムを破壊
-                Debug.Log("アイテムを手に入れた！");
+                Debug.Log("アイテムに触れた");
+                // アイテムの種類を判定する
+                ItemType itemTypeComponent = this.gameObject.GetComponent<ItemType>();
+                if (itemTypeComponent != null)
+                {
+                    switch (itemTypeComponent.itemtype)
+                    {
+                        case ItemTypeEnum.Key:
+                            ItemCheck.Item_Key = true;
+                            Debug.Log("鍵を手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Camera:
+                            ItemCheck.Item_Camera = true;
+                            Debug.Log("カメラを手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Alarm_clock:
+                            ItemCheck.Item_Alarm_clock = true;
+                            Debug.Log("目覚まし時計を手に入れた");
+                            break;
+
+                        case ItemTypeEnum.watch:
+                            ItemCheck.Item_watch = true;
+                            Debug.Log("腕時計を手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Ball:
+                            ItemCheck.Item_Ball = true;
+                            Debug.Log("ボールを手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Loudspeaker:
+                            ItemCheck.Item_Loudspeaker = true;
+                            Debug.Log("拡声器を手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Salt:
+                            ItemCheck.Item_Salt = true;
+                            Debug.Log("盛り塩を手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Cushion_that_ruins_people:
+                            ItemCheck.Item_Cushion_that_ruins_people = true;
+                            Debug.Log("クッションを手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Metal_bat:
+                            ItemCheck.Item_Metal_bat = true;
+                            Debug.Log("金属バットを手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Robot_Parts:
+                            ItemCheck.Item_Robot_Parts = true;
+                            Debug.Log("ロボットのパーツを手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Setting_materials_collection:
+                            ItemCheck.Item_Setting_materials_collection = true;
+                            Debug.Log("設定資料集を手に入れた");
+                            break;
+
+                        case ItemTypeEnum.Sweets:
+                            ItemCheck.Item_Sweets = true;
+                            Debug.Log("お菓子を手に入れた");
+                            break;
+                    }
+                    // アイテムを破壊
+                    DestroyAllItem();
+                }
             }
         }
     }

@@ -456,8 +456,8 @@ GameObject:
   m_Component:
   - component: {fileID: 253211117}
   - component: {fileID: 253211116}
-  - component: {fileID: 253211119}
   - component: {fileID: 253211118}
+  - component: {fileID: 253211119}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1175,6 +1175,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1658727558935861888, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2552476176547826697, guid: 47d8566a3e6d86d4fa84dbf27bd97565, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
