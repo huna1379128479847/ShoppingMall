@@ -14,28 +14,27 @@ public class ENDJudgment : MonoBehaviour
     private bool END2_Route = false;
     private bool END3_Route = false;
     private bool END4_Route = false;
-    //private bool ENDSecret_Route = false;
+    //  private bool ENDSecret_Route = false;
 
     [SerializeField] private GameObject PopUp;
     [SerializeField] private GameObject NO_ENDING;
     [SerializeField] private Button EnterButton;
 
 
-    public bool Item_Key;
-    public bool Item_Salt;
-    public bool Item_Setting_materials_collection;
-
     void Start()
     {
         PopUp.SetActive(false);
         NO_ENDING.SetActive(false);
     }
-    public void PopUp_Active()
+    public void popUp_Active()
     {
         PopUp.SetActive(true);
     }
     void Update()
     {
+
+        KeyJudge();
+
         if(ItemCheck.Item_Key && ItemCheck.Item_Salt && ItemCheck.Item_Setting_materials_collection == true)  // エンディング1の条件
         {
             END1_Route = true;

@@ -12,7 +12,7 @@ public class Ground : MonoBehaviour
         {
             for (int col = 0; col < _cols; col++)
             {
-                Instantiate(_tile, new Vector3(row, col, 0),
+                Instantiate(_tile, new Vector3(row, col, -6),
                     Quaternion.identity, transform);
             }
         }

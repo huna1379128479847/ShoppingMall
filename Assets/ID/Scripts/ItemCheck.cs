@@ -16,6 +16,7 @@ public static class ItemCheck
     private static bool item_Robot_Parts = false;
     private static bool item_Setting_materials_collection = false;
     private static bool item_Sweets = false;
+    public static int count = 0;
 
     public static bool Item_Key
     {
@@ -163,9 +164,9 @@ public static class ItemCheck
 
     public static int GetItemCount()
     {
-        int count = 0;
+        count = 0;
 
-        if (Item_Key) count++;
+        if (Item_Key) count++; Debug.Log(count);
         if (Item_Camera) count++;
         if (item_Alarm_clock) count++;
         if (item_watch) count++;

@@ -33,7 +33,7 @@ public class InformationManager : MonoBehaviour
 
 
     [Header("判定関連")]
-        public bool HaveKey = false;
+        public static bool HaveKey = false;
         public bool HaveCamera = false;
         public bool HaveAlarm_clock = false;
         public bool Havewatch = false;
@@ -70,7 +70,7 @@ public class InformationManager : MonoBehaviour
     void Start()
     {
         NameChange();
-        Display();
+            // Display();
     }
     void Update()
     {

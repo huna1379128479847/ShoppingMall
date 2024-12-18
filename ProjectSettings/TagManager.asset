@@ -9,6 +9,8 @@ TagManager:
   - ToSecondFloor
   - ToThirdFloor
   - ToFirstFloor
+  - EXIT
+  - Item_Key
   layers:
   - Default
   - TransparentFX
