@@ -1,20 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using TMPro;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InformationManager : MonoBehaviour
 {
+    #region "宣言"
     [Header("説明画面")]
         public GameObject No_Data;
         public GameObject Item_Key;
         public GameObject Item_Camera;
         public GameObject Item_Alarm_clock;
-        public GameObject Item_watch;
+        public GameObject Item_Watch;
         public GameObject Item_Ball;
         public GameObject Item_Loudspeaker;
         public GameObject Item_Salt;
@@ -34,17 +29,17 @@ public class InformationManager : MonoBehaviour
 
     [Header("判定関連")]
         public static bool HaveKey = false;
-        public bool HaveCamera = false;
-        public bool HaveAlarm_clock = false;
-        public bool Havewatch = false;
-        public bool HaveBall= false;
-        public bool HaveLoudspeaker = false;
-        public bool HaveSalt = false;
-        public bool HaveCushion_that_ruins_people = false;
-        public bool HaveMetal_bat = false;
-        public bool HaveRobot_Parts = false;
-        public bool HaveSetting_materials_collection = false;
-        public bool HaveSweets = false;
+        public static bool HaveCamera = false;
+        public static bool HaveAlarm_clock = false;
+        public static bool HaveWatch = false;
+        public static bool HaveBall= false;
+        public static bool HaveLoudspeaker = false;
+        public static bool HaveSalt = false;
+        public static bool HaveCushion_that_ruins_people = false;
+        public static bool HaveMetal_bat = false;
+        public static bool HaveRobot_Parts = false;
+        public static bool HaveSetting_materials_collection = false;
+        public static bool HaveSweets = false;
 
         public bool Lock_END_0;
         public bool Lock_END_1;
@@ -66,11 +61,12 @@ public class InformationManager : MonoBehaviour
         public TextMeshProUGUI Name_Robot_Parts;
         public TextMeshProUGUI Name_Setting_materials_collection;
         public TextMeshProUGUI Nsme_Sweets;
+    #endregion
 
     void Start()
     {
         NameChange();
-            // Display();
+        Display();
     }
     void Update()
     {
@@ -115,9 +111,9 @@ public class InformationManager : MonoBehaviour
     public void OnButtonClicked_watch()
     {
         Display();
-        if(Havewatch == true)
+        if(HaveWatch == true)
         {
-            Item_watch.SetActive(true);
+            Item_Watch.SetActive(true);
         }
         else
         {
@@ -321,7 +317,7 @@ public class InformationManager : MonoBehaviour
             Name_Alarm_clock.text = "???";
         }
 
-        if(Havewatch == true)
+        if(HaveWatch == true)
         {
             Name_watch.text = "【加速時計】";
         }
@@ -386,7 +382,7 @@ public class InformationManager : MonoBehaviour
 
         if(HaveSetting_materials_collection == true)
         {
-            Name_Setting_materials_collection.text = "【設定資料集の情報】";
+            Name_Setting_materials_collection.text = "【設定資料集】";
         }
         else
         {
@@ -395,7 +391,7 @@ public class InformationManager : MonoBehaviour
 
         if(HaveSweets == true)
         {
-            Nsme_Sweets.text = "【お菓子の情報】";
+            Nsme_Sweets.text = "【お菓子】";
         }
         else
         {
@@ -409,7 +405,7 @@ public class InformationManager : MonoBehaviour
         Item_Key.SetActive(false);
         Item_Camera.SetActive(false);
         Item_Alarm_clock.SetActive(false);
-        Item_watch.SetActive(false);
+        Item_Watch.SetActive(false);
         Item_Ball.SetActive(false);
         Item_Loudspeaker.SetActive(false);
         Item_Salt.SetActive(false);

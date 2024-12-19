@@ -124,8 +124,7 @@ private bool IsStageAtClickedPosition(Vector3 position)
     {
         // EXITがクリックされたときに実行する処理
         Debug.Log("EXITがクリックされました！処理を実行します。");
-        // 例：シーン遷移
-        // SceneManager.LoadScene("NextScene");
+        endjudgment.popUp_Active();
     }
 
     private void Move(Vector3 targetPosition)

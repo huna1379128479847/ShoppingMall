@@ -14,7 +14,6 @@ public class ENDJudgment : MonoBehaviour
     private bool END2_Route = false;
     private bool END3_Route = false;
     private bool END4_Route = false;
-    //  private bool ENDSecret_Route = false;
 
     [SerializeField] private GameObject PopUp;
     [SerializeField] private GameObject NO_ENDING;
@@ -43,7 +42,7 @@ public class ENDJudgment : MonoBehaviour
             END4_Route = false;
             Debug.Log("END1ルート");
         }
-        else if(ItemCheck.Item_Loudspeaker && ItemCheck.Item_Alarm_clock && ItemCheck.Item_watch == true)// エンディング2の条件
+        else if(ItemCheck.Item_Loudspeaker && ItemCheck.Item_Alarm_clock && ItemCheck.Item_Watch == true)// エンディング2の条件
         {
             END1_Route = false;
             END2_Route = true;
@@ -97,11 +96,7 @@ public class ENDJudgment : MonoBehaviour
         {
             END_4.SceneLoad();
         }
-        // else 
-        // {
-        //     END_0.SceneLoad();
-        // }
-        else
+        else if(ItemCheck.count <= 3)
         {
             NO_ENDING.SetActive(true);
             EnterButton.interactable = false;

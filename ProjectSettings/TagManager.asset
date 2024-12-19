@@ -11,6 +11,17 @@ TagManager:
   - ToFirstFloor
   - EXIT
   - Item_Key
+  - Item_Camera
+  - Item_Alarm_clock
+  - Item_Watch
+  - Item_Ball
+  - Item_Loudspeaker
+  - Item_Salt
+  - Item_Cushion_that_ruins_people
+  - Item_Metal_bat
+  - Item_Robot_Parts
+  - Item_Setting_materials_collection
+  - Item_Sweets
   layers:
   - Default
   - TransparentFX

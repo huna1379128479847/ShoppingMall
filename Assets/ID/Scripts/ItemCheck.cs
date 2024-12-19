@@ -7,7 +7,7 @@ public static class ItemCheck
     private static bool item_Key = false;
     private static bool item_Camera = false;
     private static bool item_Alarm_clock = false;
-    private static bool item_watch = false;
+    private static bool item_Watch = false;
     private static bool item_Ball = false;
     private static bool item_Loudspeaker = false;
     private static bool item_Salt = false;
@@ -54,15 +54,15 @@ public static class ItemCheck
         }
     }
 
-    public static bool Item_watch
+    public static bool Item_Watch
     {
         get
         {
-            return item_watch;
+            return item_Watch;
         }
         set
         {
-            item_watch = value;
+            item_Watch = value;
         }
     }
 
@@ -169,7 +169,7 @@ public static class ItemCheck
         if (Item_Key) count++; Debug.Log(count);
         if (Item_Camera) count++;
         if (item_Alarm_clock) count++;
-        if (item_watch) count++;
+        if (item_Watch) count++;
         if (Item_Ball) count++;
         if (Item_Loudspeaker) count++;
         if (Item_Salt) count++;
