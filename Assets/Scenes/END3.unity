@@ -866,6 +866,7 @@ MonoBehaviour:
   TextBox: {fileID: 2071367}
   Button_image: {fileID: 493477403}
   nextButton: {fileID: 226458354}
+  UnLockNumber: 3
   conversation:
   - "\u3010\u30AB\u30E1\u30E9\u3011\u3068\u3010\u91D1\u5C5E\u30D0\u30C3\u30C8\u3011\u3001 
     \u3010\u30DC\u30FC\u30EB\u3011\u3092 \u666F\u54C1\u3068\u3057\u3066\u53D7\u3051\u53D6\u3063\u305F\u3002"

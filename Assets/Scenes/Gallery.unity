@@ -8046,7 +8046,7 @@ MonoBehaviour:
   Item_Key: {fileID: 1152692679}
   Item_Camera: {fileID: 1261525901}
   Item_Alarm_clock: {fileID: 803998607}
-  Item_watch: {fileID: 1951820567}
+  Item_Watch: {fileID: 1951820567}
   Item_Ball: {fileID: 1563786854}
   Item_Loudspeaker: {fileID: 2095153890}
   Item_Salt: {fileID: 267544158}
@@ -8061,18 +8061,6 @@ MonoBehaviour:
   END_3: {fileID: 1680410090}
   END_4: {fileID: 1481607070}
   GAMEOVER: {fileID: 1378344071}
-  HaveKey: 0
-  HaveCamera: 0
-  HaveAlarm_clock: 0
-  Havewatch: 0
-  HaveBall: 0
-  HaveLoudspeaker: 0
-  HaveSalt: 0
-  HaveCushion_that_ruins_people: 0
-  HaveMetal_bat: 0
-  HaveRobot_Parts: 0
-  HaveSetting_materials_collection: 0
-  HaveSweets: 0
   Lock_END_0: 0
   Lock_END_1: 0
   Lock_END_2: 0

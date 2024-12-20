@@ -22,6 +22,8 @@ TagManager:
   - Item_Robot_Parts
   - Item_Setting_materials_collection
   - Item_Sweets
+  - MovementAnchor
+  - ToSecondDownFloor
   layers:
   - Default
   - TransparentFX

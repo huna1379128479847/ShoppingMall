@@ -1,4 +1,6 @@
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -10,7 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField] private string exitTag = "EXIT"; // EXITオブジェクトのタグ
     [SerializeField] private string stage1Tag = "ToFirstFloor"; // 1階に移動するタグ
     [SerializeField] private string stage2Tag = "ToSecondFloor"; // 2階に移動するタグ
+    [SerializeField] private string stage3_2Tag = "ToSecondDownFloor"; // 2階に移動するタグ
     [SerializeField] private string stage3Tag = "ToThirdFloor"; // 3階に移動するタグ
+    public Transform player;
 
     private Vector3 targetPos;
     private Inventory inventoryManager;
@@ -47,9 +51,22 @@ public class Player : MonoBehaviour
             {
                 AddItemToInventory(itemCollider);
             }
-            else if (IsStageAtClickedPosition(snappedPos))
+            else if (IsStage2AtClickedPosition(snappedPos))
             {
-                stageAction();
+                stage2Action();
+            }
+            else if (IsStage1AtClickedPosition(snappedPos))
+            {
+                stage1Action();
+            }
+
+            else if (IsStage3AtClickedPosition(snappedPos))
+            {
+                stage3Action();
+            }
+                else if (IsStage3DownAtClickedPosition(snappedPos))
+            {
+                stage3DownAction();
             }
             // 障害物（Wall）タグのチェック
             else if ((Mathf.Approximately(transform.position.x, snappedPos.x) || Mathf.Approximately(transform.position.y, snappedPos.y))
@@ -85,24 +102,29 @@ public class Player : MonoBehaviour
         return collider != null && collider.CompareTag(exitTag);
     }
 
-private bool IsStageAtClickedPosition(Vector3 position)
+private bool IsStage1AtClickedPosition(Vector3 position)
 {
-    // クリック位置のコライダーを取得
-    Collider2D collider = Physics2D.OverlapPoint(position);
-    
-    // colliderがnullの場合はfalseを返す
-    if (collider == null)
-    {
-        return false;
-    }
-
-    // colliderのタグをチェック
-    return collider.CompareTag(stage1Tag) || 
-            collider.CompareTag(stage2Tag) || 
-            collider.CompareTag(stage3Tag);
+        Collider2D collider = Physics2D.OverlapPoint(position);
+        return collider != null && collider.CompareTag(stage1Tag);
 }
 
+private bool IsStage2AtClickedPosition(Vector3 position)
+{
+        Collider2D collider = Physics2D.OverlapPoint(position);
+        return collider != null && collider.CompareTag(stage2Tag); 
+}
 
+private bool IsStage3AtClickedPosition(Vector3 position)
+{
+        Collider2D collider = Physics2D.OverlapPoint(position);
+        return collider != null && collider.CompareTag(stage3Tag);
+}
+
+private bool IsStage3DownAtClickedPosition(Vector3 position)
+{
+        Collider2D collider = Physics2D.OverlapPoint(position);
+        return collider != null && collider.CompareTag(stage3_2Tag);
+}
     private bool IsItemAtClickedPosition(Vector3 position, out Collider2D itemCollider)
     {
         // クリック位置にアイテムタグのオブジェクトがあるかチェック
@@ -132,9 +154,32 @@ private bool IsStageAtClickedPosition(Vector3 position)
         // 現在位置からターゲット位置へ移動
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, _speed * Time.deltaTime);
     }
-    private void stageAction()
+    private void stage1Action()
     {
         Debug.Log("階段がクリックされました。 処理を実行します。");
-        stairs.MoveToFloor();
+        player.position = new Vector3(4,29,0);
+        targetPos = new Vector3(4,29,0);
+    }
+
+    private void stage2Action()
+    {
+        Debug.Log("階段がクリックされました。 処理を実行します。");
+        player.position = new Vector3(58,25,0);
+        targetPos = new Vector3(58,25,0);
+    }
+
+    private void stage3Action()
+    {
+        Debug.Log("階段がクリックされました。 処理を実行します。");
+        player.position = new Vector3(124,14,0);
+        targetPos = new Vector3(124,14,0);
+    }
+    
+
+    private void stage3DownAction()
+    {
+        Debug.Log("階段がクリックされました。 処理を実行します。");
+        player.position = new Vector3(67,4,0);
+        targetPos = new Vector3(67,4,0);
     }
 }

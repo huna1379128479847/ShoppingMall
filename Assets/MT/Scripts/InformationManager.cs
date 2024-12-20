@@ -41,12 +41,12 @@ public class InformationManager : MonoBehaviour
         public static bool HaveSetting_materials_collection = false;
         public static bool HaveSweets = false;
 
-        public bool Lock_END_0;
-        public bool Lock_END_1;
-        public bool Lock_END_2;
-        public bool Lock_END_3;
-        public bool Lock_END_4;
-        public bool Lock_GAMEOVER;
+        public static bool Lock_END_0;
+        public static bool Lock_END_1;
+        public static bool Lock_END_2;
+        public static bool Lock_END_3;
+        public static bool Lock_END_4;
+        public static bool Lock_GAMEOVER;
 
     [Header("テキスト関連")]
         public TextMeshProUGUI Name_key;

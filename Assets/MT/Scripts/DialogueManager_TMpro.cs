@@ -10,6 +10,12 @@ public class DialogueManager_TMpro : MonoBehaviour
     public TextMeshProUGUI TextBox;
     public Image Button_image;
     public Button nextButton;
+    public int UnLockNumber;
+    public static bool END_00;
+    public static bool END_01;
+    public static bool END_02;
+    public static bool END_03;
+    public static bool END_04;
 
     // 会話リスト
     public List<string> conversation = new List<string>
@@ -66,6 +72,31 @@ public class DialogueManager_TMpro : MonoBehaviour
             sequence.Join(Button_image.DOFade(0f,1f));
             Debug.Log(TextBox.text);
             TitleButton.gameObject.SetActive(true);
+            switch (UnLockNumber)
+            {
+                case 0:
+                InformationManager.Lock_END_0 = true;
+                break;
+                case 1:
+                InformationManager.Lock_END_1 = true;
+                break;
+                case 2:
+                InformationManager.Lock_END_2 = true;
+                break;
+                case 3:
+                InformationManager.Lock_END_3 = true;
+                break;
+                case 4:
+                InformationManager.Lock_END_4 = true;
+                break;
+                case 5:
+                InformationManager.Lock_GAMEOVER = true;
+                break;
+            }
+                
+
+            
+            
 
         }
     }

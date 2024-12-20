@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EffectCanvas.unity
     guid: c295fc78d614619479d03b8bd69e2a7f
+  - enabled: 1
+    path: Assets/Scenes/Manager.unity
+    guid: 075be30eedb530e43997f21982613366
   m_configObjects: {}
