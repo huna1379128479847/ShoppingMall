@@ -10,6 +10,21 @@ public class Inventory : MonoBehaviour
     public TextMeshProUGUI ItemCountText;
     private int ItemCount;
 
+    void Start()
+    {
+        ItemCheck.Item_Key = false;
+        ItemCheck.Item_Camera = false;
+        ItemCheck.Item_Alarm_clock = false;
+        ItemCheck.Item_Watch = false;
+        ItemCheck.Item_Ball = false;
+        ItemCheck.Item_Loudspeaker = false;
+        ItemCheck.Item_Salt = false;
+        ItemCheck.Item_Cushion_that_ruins_people = false;
+        ItemCheck.Item_Metal_bat = false;
+        ItemCheck.Item_Robot_Parts = false;
+        ItemCheck.Item_Setting_materials_collection = false;
+        ItemCheck.Item_Sweets = false;
+    }
 
     // インベントリにアイテムを追加する
     public void AddItem(string itemName)

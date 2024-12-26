@@ -292,7 +292,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 168}
-  m_SizeDelta: {x: 1000, y: 1000}
+  m_SizeDelta: {x: 1024, y: 1024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10705087
 MonoBehaviour:
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4931,10 +4931,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1378344072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 525.78, y: 330.3222}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813790403
 MonoBehaviour:
@@ -4956,7 +4956,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: END_4
+  m_text: "\u3010\u30B2\u30FC\u30E0\u30AA\u30FC\u30D0\u30FC\u3011\n\u596E\u95D8\u3057\u305F\u304C\u3001\u6355\u307E\u3063\u3066\u3057\u307E\u3063\u305F\u3002
+    \u3053\u306E\u5F8C\u306F\u8FFD\u3044\u51FA\u3055\u308C\u308B\u3093\u3060\u308D\u3046\u304B\u3002\n
+    \u300C\u65B0\u3057\u3044\u5B50\u3060\u300D\u300C\u3044\u3044\u3088\u3001\u4E00\u7DD2\u306B\u904A\u307C\u300D
+    \u5B50\u4F9B\u306E\u58F0\u304C2\u3064\u91CD\u306A\u3063\u3066\u3001\u805E\u3053\u3048\u305F\u3002\r\n............\u3002\n\u7686\u3068\u9B3C\u3054\u3063\u3053\u3092\u3057\u3066\u3044\u305F\u3089\u3001\u65B0\u3057\u3044\u5B50\u304C
+    \u6DF7\u3058\u3063\u3066\u304D\u305F\u3002\u4E00\u7DD2\u306B\u904A\u3093\u3067\u3042\u3052\u3088\u3046\u3002"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed9accc231f96b141b88b6108567d563, type: 2}
   m_sharedMaterial: {fileID: -7954435274966531173, guid: ed9accc231f96b141b88b6108567d563, type: 2}
@@ -4983,8 +4987,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 103
-  m_fontSizeBase: 103
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7626,7 +7630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1152692680
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7662,7 +7666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7912,7 +7916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.95294124, g: 0.89019614, b: 0.30980393, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8061,12 +8065,6 @@ MonoBehaviour:
   END_3: {fileID: 1680410090}
   END_4: {fileID: 1481607070}
   GAMEOVER: {fileID: 1378344071}
-  Lock_END_0: 0
-  Lock_END_1: 0
-  Lock_END_2: 0
-  Lock_END_3: 0
-  Lock_END_4: 0
-  Lock_GAMEOVER: 0
   Name_key: {fileID: 226509127}
   Name_Camera: {fileID: 1618141000}
   Name_Alarm_clock: {fileID: 432433910}
@@ -9062,7 +9060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1481607071
 RectTransform:
   m_ObjectHideFlags: 0
