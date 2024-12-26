@@ -5,15 +5,18 @@ using UnityEngine.UI;
 
 public class ENDJudgment : MonoBehaviour
 {
+    [SerializeField] private SceneLoadManager END_0;
     [SerializeField] private SceneLoadManager END_1;
     [SerializeField] private SceneLoadManager END_2;
     [SerializeField] private SceneLoadManager END_3;
     [SerializeField] private SceneLoadManager END_4;
 
+    private bool END0_Route = false;
     private bool END1_Route = false;
     private bool END2_Route = false;
     private bool END3_Route = false;
     private bool END4_Route = false;
+
 
     [SerializeField] private GameObject PopUp;
     [SerializeField] private GameObject NO_ENDING;
@@ -40,6 +43,7 @@ public class ENDJudgment : MonoBehaviour
             END2_Route = false;
             END3_Route = false;
             END4_Route = false;
+            END0_Route = true;
             Debug.Log("END1ルート");
         }
         else if(ItemCheck.Item_Loudspeaker && ItemCheck.Item_Alarm_clock && ItemCheck.Item_Watch == true)// エンディング2の条件
@@ -48,6 +52,7 @@ public class ENDJudgment : MonoBehaviour
             END2_Route = true;
             END3_Route = false;
             END4_Route = false;
+            END0_Route = true;
             Debug.Log("END2ルート");
         }
         else if(ItemCheck.Item_Camera && ItemCheck.Item_Metal_bat && ItemCheck.Item_Ball == true)// エンディング3の条件
@@ -56,6 +61,7 @@ public class ENDJudgment : MonoBehaviour
             END2_Route = false;
             END3_Route = true;
             END4_Route = false;
+            END0_Route = true;
             Debug.Log("END3ルート");
         }
         else if(ItemCheck.Item_Robot_Parts && ItemCheck.Item_Cushion_that_ruins_people && ItemCheck.Item_Sweets == true)// エンディング4の条件
@@ -64,10 +70,19 @@ public class ENDJudgment : MonoBehaviour
             END2_Route = false;
             END3_Route = false;
             END4_Route = true;
+            END0_Route = true;
             Debug.Log("END4ルート");
         }
-
-        else
+        else if(Inventory.inventory.Count == 3)
+        {
+            END1_Route = false;
+            END2_Route = false;
+            END3_Route = false;
+            END4_Route = false;
+            END0_Route = true;
+            Debug.Log("END0ルート");
+        }
+        else 
         {
             Debug.Log("現在該当ENDがありません");
         }
@@ -96,11 +111,15 @@ public class ENDJudgment : MonoBehaviour
         {
             END_4.SceneLoad();
         }
-        else if(ItemCheck.count <= 3)
+        else if(Inventory.inventory.Count <= 2)
         {
             NO_ENDING.SetActive(true);
             EnterButton.interactable = false;
             StartCoroutine(Hidden_Message());
+        }
+        else if(Inventory.inventory.Count == 3 && END0_Route == true)
+        {
+            END_0.SceneLoad();
         }
     }
 

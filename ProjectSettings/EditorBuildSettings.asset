@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/InMap.unity
     guid: 3954c40162443ee42bd90024a6f5a12e
   - enabled: 1
+    path: Assets/Scenes/GAMEOVER.unity
+    guid: 7e7a9065806c349438e4e07ce822e898
+  - enabled: 1
     path: Assets/Scenes/ENDJudgment.unity
     guid: f46e09b4222ae844e8efc180efd5181b
   - enabled: 1
@@ -59,7 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EffectCanvas.unity
     guid: c295fc78d614619479d03b8bd69e2a7f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Manager.unity
     guid: 075be30eedb530e43997f21982613366
   m_configObjects: {}

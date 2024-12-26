@@ -1,14 +1,20 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
     // インベントリのリスト
     public  static List<string> inventory = new List<string>();
+    public List<GameObject> ITEM = new List<GameObject>();
+    public TextMeshProUGUI ItemCountText;
+    private int ItemCount;
+
 
     // インベントリにアイテムを追加する
     public void AddItem(string itemName)
     {
+        ItemCount++;
         inventory.Add(itemName);
 
     switch(itemName)
@@ -88,9 +94,11 @@ public class Inventory : MonoBehaviour
 
     }
 
-    // インベントリの内容をコンソールに表示
+    // インベントリの内容をDebug.Logで表示
     public void Update()
     {
+        ItemCountText.text = $"アイテム数:{ItemCount}";
+        
         if(Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("現在のインベントリ:");
@@ -99,7 +107,14 @@ public class Inventory : MonoBehaviour
                 Debug.Log(item);
             }
         }
-
+        if(inventory.Count == 3)
+        {
+            ItemCountText.text = $"もう持てない出口に向かおう...アイテム数:{ItemCount}";
+            for(int i = 0 ; i < ITEM.Count ; i++)
+            {
+            GameObject ItemObject = ITEM[i];
+            ItemObject.SetActive(false);
+            }
+        }
     }
-
 }
