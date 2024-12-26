@@ -11,6 +11,7 @@ using UnityEngine;
 
 namespace BlackOut.UI
 {
+    
     [RequireComponent(typeof(ButtonV))]
     [RequireComponent (typeof(Button))]
     public class ButtonVM : TextViewModel, IButtonUI, ICustomizableButton

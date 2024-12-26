@@ -21,7 +21,6 @@ public class AccordionMenu : MonoBehaviour
     {
         OnButton = !OnButton;  // 展開状態を切り替え
         SetFoldingObjectActive(OnButton);  // OnButtonの状態次第で表示・非表示を設定
-        ChangeText();  // テキストを更新
     }
 
     // リスト内のオブジェクトを表示・非表示にするメソッド
