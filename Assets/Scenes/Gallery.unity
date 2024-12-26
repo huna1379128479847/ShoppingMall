@@ -7630,7 +7630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1152692680
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8049,16 +8049,16 @@ MonoBehaviour:
   No_Data: {fileID: 2054002067}
   Item_Key: {fileID: 1152692679}
   Item_Camera: {fileID: 1261525901}
-  Item_Alarm_clock: {fileID: 803998607}
-  Item_Watch: {fileID: 1951820567}
-  Item_Ball: {fileID: 1563786854}
+  Item_Alarm_clock: {fileID: 880934143}
+  Item_Watch: {fileID: 1512167995}
+  Item_Ball: {fileID: 1136524849}
   Item_Loudspeaker: {fileID: 2095153890}
   Item_Salt: {fileID: 267544158}
-  Item_Cushion_that_ruins_people: {fileID: 2136416860}
+  Item_Cushion_that_ruins_people: {fileID: 498035875}
   Item_Metal_bat: {fileID: 346384607}
   Item_Robot_Parts: {fileID: 110017991}
-  Item_Setting_materials_collection: {fileID: 188097691}
-  Item_Sweets: {fileID: 1830958255}
+  Item_Setting_materials_collection: {fileID: 1811887630}
+  Item_Sweets: {fileID: 811151568}
   END_0: {fileID: 33465388}
   END_1: {fileID: 263808212}
   END_2: {fileID: 1437690957}
@@ -13118,7 +13118,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1338601760}
         m_TargetAssemblyTypeName: InformationManager, Assembly-CSharp
-        m_MethodName: OnButtonClicked_A_cushion_that_ruins_people
+        m_MethodName: OnButtonClicked_Cushion_that_ruins_people
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
