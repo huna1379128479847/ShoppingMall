@@ -292,7 +292,7 @@ public class InformationManager : MonoBehaviour
     {
         if(HaveKey == true)
         {
-            Name_key.text = "【シャッターの鍵】";
+            Name_key.text = "【鍵】";
         }
         else
         {
@@ -310,7 +310,7 @@ public class InformationManager : MonoBehaviour
 
         if(HaveAlarm_clock == true)
         {
-            Name_Alarm_clock.text = "【遅延時計】";
+            Name_Alarm_clock.text = "【目覚まし時計】";
         }
         else
         {
@@ -319,7 +319,7 @@ public class InformationManager : MonoBehaviour
 
         if(HaveWatch == true)
         {
-            Name_watch.text = "【加速時計】";
+            Name_watch.text = "【腕時計】";
         }
         else
         {
