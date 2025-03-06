@@ -4,6 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private ENDJudgment endjudgment;
+    [SerializeField] private Inventory Inventory;
     [SerializeField] private Stairs stairs;
     [SerializeField] private float _speed = 5.0f;
     [SerializeField] private float gridSize = 1.0f; // マス目のサイズ
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
 
         // InventoryManagerを取得
         inventoryManager = FindObjectOfType<Inventory>();
+        Inventory.Start();
     }
 
     void Update()

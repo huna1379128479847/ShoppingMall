@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     public TextMeshProUGUI ItemCountText;
     private int ItemCount;
 
-    void Start()
+    public void Start()
     {
         ItemCheck.Item_Key = false;
         ItemCheck.Item_Camera = false;
